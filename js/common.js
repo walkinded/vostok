@@ -704,7 +704,7 @@
     grabCursor: true,
     // slidesPerView: 1,
     spaceBetween: 10,
-    // loop: true,
+    loop: true,
     autoplay: {
       delay: 3000,
     },

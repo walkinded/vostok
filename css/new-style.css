@@ -17,7 +17,7 @@
 
 .swiper-slide img {
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: contain;
 }
 
@@ -51,7 +51,7 @@
 .swiper-card-button-next,
 .swiper-card-button-prev {
   top: 50%;
-  transform: translateY(50%);
+  /* transform: translateY(0%); */
 }
 
 .swiper-card-button-next {
