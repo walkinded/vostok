@@ -1,0 +1,186 @@
+.contacts
+  position: relative
+  background-color: #fafafa
+  &__df
+    display: flex
+    margin-bottom: 25px
+  &__info
+    flex-grow: 1
+    position: relative
+    padding: 27px 33px 20px
+    overflow: hidden
+    z-index: 1
+    .title
+      margin-bottom: 40px
+      font-size: 24px
+      color: #333333
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      right: -285px
+      display: block
+      width: 463px
+      height: 447px
+      transform: translateY(-50%)
+      background: transparent url('../img/svg/decor-wrap.svg') no-repeat center center
+      background-size: contain
+      z-index: -1
+  &__form
+    flex-shrink: 0
+    width: 360px
+    max-width: 100%
+    margin-left: 27px
+  &__item
+    display: flex
+    margin-bottom: 28px
+    color: #333333
+    a
+      display: block
+      text-decoration: none
+      outline: none
+      color: #333333
+      transition: 0.3s
+      &:hover
+        color: $accent
+    &:last-of-type
+      .icon
+        fill: transparent
+        stroke: #000 !important
+        stroke-width: 41
+    .icon
+      display: block
+      width: 16px
+      height: 16px
+      margin-top: 4px
+      margin-right: 16px
+      fill: #000
+  .about
+    padding-top: 0
+    padding-bottom: 26px
+  .page-top
+    margin-bottom: 22px
+
+  &__team
+    margin-bottom: 40px
+    padding-top: 5px
+    &-wrap
+      position: relative
+    &-slider
+      overflow: hidden
+      padding-top: 95px
+    &-item
+      position: relative
+      background-color: #feffff
+      padding-top: 1px
+    &-img
+      box-shadow: 1px 3px 10px 0px rgba(195,195,195,0.3)
+      width: 198px
+      height: 198px
+      margin: -84px auto 12px
+      background-color: #feffff
+      border: 15px solid #fff
+      border-radius: 50%
+      overflow: hidden
+      transition: 0.3s
+      img
+        display: block
+        height: 100%
+      &:hover
+        box-shadow: 1px 3px 20px 0px rgba(195,195,195,0.7)
+    &-content
+      padding: 0 20px 44px
+      text-align: center
+      strong
+        font-weight: 700
+      a
+        text-decoration: none
+        outline: none
+        transition: 0.3s
+        &:hover
+          color: $accent
+    &-btns
+      .swiper-dots
+        display: none
+      .swiper-button-prev
+        left: -58px
+      .swiper-button-next
+        right: -58px
+      .swiper-button-prev,
+      .swiper-button-next
+        top: 60%
+
+
+  @media screen and (max-width: 1300px)
+    &__team
+      &-btns
+        .swiper-button-prev
+          left: -28px
+        .swiper-button-next
+          right: -28px
+
+  // max-width 1300px
+
+  @media screen and (max-width: 1200px)
+    &__team
+      &-btns
+
+        .swiper-button-prev,
+        .swiper-button-next
+          display: none
+        .swiper-dots
+          display: flex
+          justify-content: center
+
+  // max-width 1200px
+
+  @media screen and (max-width: 800px)
+    &__info
+      padding: 27px 15px 20px
+
+  // max-width 800px
+
+  @media screen and (max-width: 767px)
+    padding-top: 30px
+    &__form
+      width: 320px
+      margin-left: 10px
+    &__team
+      &-btns
+        margin-top: 30px
+
+  // max-width 767px
+
+  @media screen and (max-width: 600px)
+    &__df
+      flex-direction: column
+    &__info
+      width: 100%
+    &__form
+      margin-left: auto
+      margin-right: auto
+      margin-top: 20px
+
+  // max-width 600px
+
+  @media screen and (max-width: 500px)
+    &__info
+      .title
+        font-size: 22px
+      &::after
+        right: -355px
+    &__team
+      margin-bottom: 18px
+      &-content
+        padding: 0 20px 24px
+        font-size: 14px
+      &-img
+        width: 150px
+        height: 150px
+        border-width: 9px
+      &-btns
+        margin-top: 20px
+
+  // max-width 500px
+
+/* contacts */

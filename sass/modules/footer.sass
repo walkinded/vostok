@@ -1,0 +1,283 @@
+.footer
+  position: relative
+  background-color: #363535
+  z-index: 5
+  &__top
+    display: flex
+    padding-top: 32px
+    padding-bottom: 35px
+  &__left
+    width: 51.31578947368421%
+  &__right
+    width: 48.7719298245614%
+    .footer__menu
+      width: auto
+      &:first-of-type
+        flex-grow: 1
+      &:last-of-type
+        min-width: 196px
+        flex-shrink: 0
+        padding-right: 0
+  &__df
+    display: flex
+  &__menu
+    width: 50%
+    padding-right: 60px
+  .menu
+    margin: 0
+    padding: 0
+    list-style: none
+    & > li
+      & > a
+        position: relative
+        display: inline-block
+        text-decoration: none
+        outline: none
+        margin-bottom: 10px
+        font-size: 18px
+        line-height: 32px
+        font-weight: 700
+        color: #ffffff
+    &__open
+      display: none
+
+  .sub-menu
+    margin: 0
+    padding: 0
+    list-style: none
+    & > li
+      margin-bottom: 12px
+      &:last-of-type
+        margin-bottom: 0
+      & > a
+        position: relative
+        display: inline-block
+        text-decoration: none
+        outline: none
+        font-size: 14px
+        line-height: 1.2
+        color: #ffffff
+        &::after
+          content: ''
+          position: absolute
+          left: 0
+          bottom: -2px
+          display: block
+          width: 100%
+          height: 1px
+          background-color: #fff
+          transform: scale(0)
+          border-radius: 1.5px
+          transition: 0.5s
+        &:hover
+          &::after
+            transform: scale(1)
+
+  .menu-item__wrap
+    display: flex
+    .sub-menu
+      width: 50%
+
+  &__pay
+    margin-top: 34px
+    &-title
+      margin-bottom: 15px
+      font-size: 16px
+      font-weight: 700
+      color: #ffffff
+    &-list
+      margin: 0
+      padding: 0
+      list-style: none
+      display: flex
+      align-items: center
+      & > li
+        width: 63px
+        margin-right: 12px
+    &-img
+      opacity: 0.5
+      height: 35px
+      background-color: #ffffff
+      border-radius: 3.0px
+      padding: 5px 11px
+      transition: 0.3s
+      &:hover
+        opacity: 1
+      img
+        display: block
+        height: 100%
+    &-another
+      display: flex
+      align-items: center
+      Text: Моментальный платеж
+      font-size: 16px
+      font-weight: 700
+      color: #ffffff
+      white-space: nowrap
+      .icon
+        flex-shrink: 0
+        display: block
+        width: 29px
+        height: 19px
+        margin-right: 15px
+        fill: #fff
+
+  &__contacts
+    &-link
+      position: relative
+      display: inline-block
+      text-decoration: none
+      outline: none
+      font-size: 14px
+      color: #ffffff
+      transition: 0.3s
+      &:hover
+        color: $accent
+    &-df
+      display: flex
+      align-items: center
+    &-text
+      margin-bottom: 32px
+      font-size: 14px
+      line-height: 1.5 /* 21 / 14 */
+      color: #ffffff
+      strong
+        font-weight: 600
+      &--socials
+        font-size: 18px
+
+  .socials
+    margin-top: -14px
+
+
+  &__bottom
+    border-top: 1px solid rgba(204,204,204,0.3)
+    &-df
+      height: 64px
+      display: flex
+      align-items: center
+    .text
+      font-size: 13px
+      line-height: 16px
+      color: rgba(#fff, .5)
+    a.text
+      text-decoration: none
+      outline: none
+      transition: 0.3s
+      &:hover
+        color: $accent
+
+  &__politics
+    margin-right: 72px
+
+  .made
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+    cursor: pointer
+    text-decoration: none
+    margin-left: 85px
+    .icon
+      width: 60px
+      height: 22px
+      margin-left: 13px
+      fill: #fff
+      transition: 0.3s
+
+
+  @media screen and (max-width: 991px)
+    &__pay
+      display: none
+    &__top
+      flex-direction: column
+    &__left
+      width: 100%
+    &__right
+      width: 100%
+    &__df
+      flex-direction: column
+    &__menu
+      width: 100%
+      padding-right: 0
+    .menu
+      & > li
+        & > a
+          display: flex
+          align-items: center
+          justify-content: space-between
+          margin-bottom: 0
+          padding-bottom: 5px
+          padding-top: 5px
+          border-bottom: 1px solid rgba(255,255,255,0.3)
+          &::after
+            content: none
+      &__open
+        display: flex
+        width: 30px
+        height: 30px
+        margin-left: 20px
+        border-radius: 50%
+        border: 1px solid #fff
+        background: transparent url('../img/svg/arrow-white.svg') no-repeat center center
+        background-size: 6px 10px
+        transform: rotate(90deg)
+        transition: 0.3s
+        &.active
+          transform: rotate(-90deg)
+
+    .sub-menu
+      display: none
+      padding-top: 10px
+      & > li
+        margin-bottom: 5px
+        & > a
+          padding-left: 15px
+
+    &__contacts
+      margin-top: 15px
+      &-item
+        &--mail
+          margin-top: 20px
+          margin-bottom: 22px
+      &-text
+        margin-bottom: 22px
+    .socials
+      margin-top: 0
+
+  // max-width 991px
+
+  @media screen and (max-width: 767px)
+    &__bottom
+      &-df
+        justify-content: space-between
+      .footer__politics
+        margin-right: 30px
+
+  // max-width 767px
+
+  @media screen and (max-width: 650px)
+    &__bottom
+      &-df
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        text-align: center
+        height: auto
+        padding: 10px 0
+      .footer__politics
+        margin-right: 0
+        margin-bottom: 5px
+    .made
+      margin-left: 0
+      margin-top: 10px
+
+  // max-width 650px
+
+  @media screen and (max-width: 575px)
+    &__bottom
+      height: auto
+
+  // max-width 575px
+
+/* footer */

@@ -1,0 +1,66 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset="UTF-8")
+
+    title  |
+
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(name='format-detection', content='telephone=no')
+
+    // Template Basic Images Start
+    //- link(rel='icon', sizes='32x32', href='img/favicon/favicon-32x32.png')
+    //- link(rel='icon', sizes='16x16', href='img/favicon/favicon-16x16.png')
+    // Template Basic Images End
+
+    // Custom Browsers Color Start
+    meta(name='theme-color', content='#363535')
+    // Custom Browsers Color End
+
+    include blocks/scripts.pug
+    include blocks/script-map.pug
+    include blocks/styles.pug
+    include blocks/header.pug
+    include blocks/paginator.pug
+    include blocks/breadcrumbs.pug
+    include blocks/page-top.pug
+
+    include blocks/scr_prod-item.pug
+    include blocks/scr_prod.pug
+
+    include blocks/footer.pug
+    include blocks/socials.pug
+
+  body
+
+    +header("a")
+
+    //. Для внутренних добавляется класс "page_wr--second"
+    #page_wr.page_wr.page_wr--second
+      +scr_prod-item
+      +scr_prod--may
+      +scr_prod--familiar
+      .prod-item__more
+        .container
+          .prod__more.show-more__wrap
+            .show-more__content
+              .article
+                p SEO текст «Восточный букет» (Крымский дом сладостей) предлагает Вам высококачественные КРЫМСКИЕ СЛАДОСТИ, СПЕЦИИ и ТРАВЯНЫЕ ЧАИ — с настоящим крымским духом и вкусом! Такие подарки, купленные для себя или близких, точно никого не оставят в стороне. Они наполнены одновременно эксклюзивностью, красотой, и служат отличным дополнением к Вашему столу!
+                p SEO текст «Восточный букет» (Крымский дом сладостей) предлагает Вам высококачественные КРЫМСКИЕ СЛАДОСТИ, СПЕЦИИ и ТРАВЯНЫЕ ЧАИ — с настоящим крымским духом и вкусом! Такие подарки, купленные для себя или близких, точно никого не оставят в стороне. Они наполнены одновременно эксклюзивностью, красотой, и служат отличным дополнением к Вашему столу!
+                p SEO текст «Восточный букет» (Крымский дом сладостей) предлагает Вам высококачественные КРЫМСКИЕ СЛАДОСТИ, СПЕЦИИ и ТРАВЯНЫЕ ЧАИ — с настоящим крымским духом и вкусом! Такие подарки, купленные для себя или близких, точно никого не оставят в стороне. Они наполнены одновременно эксклюзивностью, красотой, и служат отличным дополнением к Вашему столу!
+                p SEO текст «Восточный букет» (Крымский дом сладостей) предлагает Вам высококачественные КРЫМСКИЕ СЛАДОСТИ, СПЕЦИИ и ТРАВЯНЫЕ ЧАИ — с настоящим крымским духом и вкусом! Такие подарки, купленные для себя или близких, точно никого не оставят в стороне. Они наполнены одновременно эксклюзивностью, красотой, и служат отличным дополнением к Вашему столу!
+
+            .show-more__btns
+              button(type="button")
+                span Развернуть
+
+      a.to-top(href="#page_wr")
+        i.fa.fa-angle-up
+
+    +footer("a")
+
+    +styles
+    +scripts
+    +script-map

@@ -1,0 +1,61 @@
+.brands
+  position: relative
+  padding-top: 38px
+  padding-bottom: 92px
+  &__slider
+    overflow: hidden
+    &-btns
+      .swiper-dots
+        display: none
+      .swiper-button-prev
+        left: -54px
+      .swiper-button-next
+        right: -54px
+  &__wrap
+    position: relative
+    margin-top: 42px
+  &__item
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 119px
+    background-color: #ffffff
+    img
+      display: block
+      max-width: 80%
+      max-height: 80%
+
+
+  @media screen and (max-width: 1270px)
+    &__slider
+      &-btns
+        .swiper-button-prev
+          left: -24px
+        .swiper-button-next
+          right: -24px
+
+  // max-width 1270p
+
+  @media screen and (max-width: 1200px)
+    padding-bottom: 52px
+    &__slider
+      &-btns
+        .swiper-button-prev,
+        .swiper-button-next
+          display: none
+        .swiper-dots
+          display: flex
+          justify-content: center
+
+  // max-width 1200px
+
+  @media screen and (max-width: 767px)
+    padding-bottom: 32px
+    &__item
+      height: 89px
+    &__wrap
+      margin-top: 22px
+
+  // max-width 767px
+
+/* brands */

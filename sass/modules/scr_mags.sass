@@ -1,0 +1,60 @@
+.mags
+  position: relative
+  background: #efeeed url('../img/categories-bg.jpg') repeat center center
+  padding-top: 35px
+  padding-bottom: 79px
+  &__slider
+    overflow: hidden
+    &-btns
+      display: flex
+      justify-content: center
+      .swiper-dots
+        display: none
+      .swiper-button-prev
+        left: -54px
+      .swiper-button-next
+        right: -54px
+  &__wrap
+    position: relative
+    margin-top: 40px
+  &__item
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 92px
+    background-color: #ffffff
+    img
+      display: block
+      max-width: 70%
+      max-height: 80%
+
+
+  @media screen and (max-width: 1270px)
+    &__slider
+      &-btns
+        .swiper-button-prev
+          left: -24px
+        .swiper-button-next
+          right: -24px
+
+  // max-width 1270p
+
+  @media screen and (max-width: 1200px)
+    padding-bottom: 49px
+    &__slider
+      &-btns
+        .swiper-button-prev,
+        .swiper-button-next
+          display: none
+        .swiper-dots
+          display: flex
+          justify-content: center
+
+  // max-width 1200px
+
+  @media screen and (max-width: 575px)
+    padding-bottom: 32px
+
+  // max-width 575px
+
+/* mags */

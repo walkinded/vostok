@@ -1,0 +1,76 @@
+/* Переопределение стилей fancybox */
+.fancybox-lock
+  max-width: 100%
+  overflow: hidden!important
+
+.fancybox-overlay
+  background: none
+  background-color: rgba(#000,0.5)
+
+#fancybox-loading div
+  width: 44px
+  height: 44px
+  background: url(../libs/fancybox/fancybox_loading.gif) center center no-repeat
+
+.fancybox-close
+  background: none
+  top: 5px
+  right: 5px
+
+  display: block
+  width: 40px
+  height: 40px
+  background: $accent
+  border-radius: 6px
+  opacity: 0.7
+  transition: 0.3s
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+
+    display: block
+    width: 80%
+    height: 2px
+    background: rgba(#fff,0.7)
+    transition: 0.3s
+
+  &::before
+    transform: translate(-50%,-50%) rotate(45deg)
+
+  &::after
+    transform: translate(-50%,-50%) rotate(-45deg)
+
+  &:hover
+    opacity: 1
+    &::before,
+    &::after
+      background: #fff
+
+.fancybox-nav
+    background: transparent url(../libs/fancybox/blank.gif)
+
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span
+  background-image: none
+
+.fancybox-next, .fancybox-prev
+  width: 25%
+  transition: 0.3s
+
+.fancybox-prev
+  &:hover
+    background: linear-gradient(90deg, rgba($accent,0.2) 0%, rgba(#000,0) 100%)
+
+.fancybox-next
+  &:hover
+    background: linear-gradient(270deg, rgba($accent,0.2) 0%, rgba(#000,0) 100%)
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5)
+  #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span
+    background: none
+  #fancybox-loading div
+    background-image: url(../libs/fancybox/fancybox_loading@2x.gif)

@@ -1,0 +1,27 @@
+mixin scr_about()
+  section.scr_about.about(id="scr_about")
+    .container
+      .about__wrap
+        .about__df
+          .about__content
+            h2.title Посетите самый большой
+              br
+              |  склад-магазин восточных сладостей
+              br
+              |  и сухофруктов в Крыму
+
+            .about__desc
+              p Вы сможете увидеть, обонять аромат и даже
+                br
+                |  попробовать продукцию, представленную у нас
+
+          a.about__video.fancybox(href="https://www.youtube.com/embed/atpnSRhv_f0?controls=1&amp;amp;showinfo=0&amp;amp;autoplay=1&amp;amp;loop=1&amp;amp;playlist=atpnSRhv_f0" data-fancybox-type="iframe")
+            noscript
+              img.lazy(src="img/img-about.jpg" alt="" width="125" height="90" data-object-fit-cover)
+            img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img/img-about.jpg" alt="" width="125" height="90" data-object-fit-cover)
+
+            span.about__video-button
+            span.about__video-text Видео о нашем магазине
+
+
+  // /.scr_about

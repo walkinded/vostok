@@ -1,0 +1,144 @@
+mixin scr_prod-item()
+  section.scr_prod-item.prod-item(id="scr_prod-item")
+    .container
+      +breadcrumbs
+
+      .prod-item__df
+        .prod-item__gallery
+          .prod-item__gallery-top
+            button.prod-item__gallery-btn
+              svg.icon
+                use(xlink:href="img/svg/sprite.svg#icon-heart")
+
+          .prod-item__gallery-wrap
+            .prod-item__gallery-slider#prod-item__gallery-slider
+              .swiper-wrapper
+                .swiper-slide.prod-item__gallery-slide
+                  noscript
+                    img.lazy(src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                  img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+
+                .swiper-slide.prod-item__gallery-slide
+                  noscript
+                    img.lazy(src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                  img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+
+                .swiper-slide.prod-item__gallery-slide
+                  noscript
+                    img.lazy(src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                  img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+
+                .swiper-slide.prod-item__gallery-slide
+                  noscript
+                    img.lazy(src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                  img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+
+            .prod-item__gallery-btns
+              button.swiper-button-prev
+              button.swiper-button-next
+
+          .prod-item__gallery-thumbs#prod-item__gallery-thumbs
+            .swiper-wrapper
+              .swiper-slide.prod-item__gallery-thumb
+                noscript
+                  img.lazy(src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+
+              .swiper-slide.prod-item__gallery-thumb
+                noscript
+                  img.lazy(src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+
+              .swiper-slide.prod-item__gallery-thumb
+                noscript
+                  img.lazy(src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+
+              .swiper-slide.prod-item__gallery-thumb
+                noscript
+                  img.lazy(src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-temp/prod-item-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+
+        .prod-item__info
+          h1.prod-item__title Печенье Ulker «Biskrem»
+            br
+            |  с шоколадной начинкой
+
+          ul.prod__categor
+            li.prod__categor-item.prod__categor-item--cat2 Турецкая продукция
+
+          ul.prod-item__chars
+            li
+              strong Производитель:
+              |  Ulker
+            li
+              strong Вес товара,
+              |  г 100
+
+          .prod-item__clock
+            p Акция закончится через:
+            #countdown
+
+          .prod__prices
+            span.prod__price.prod__price--old 1 300 ₽
+            span.prod__price.prod__price--new 1 218 ₽
+
+          .prod-item__bottom
+            .prod__quantity
+              .quantity
+                button.quantity-arrow.quantity-arrow-minus(type='button') —
+                input.quantity-num(type='number', value='1')
+                button.quantity-arrow.quantity-arrow-plus(type='button') +
+
+            .prod__link
+              .btn__wrap
+                a.btn.btn--red(href="#") Купить
+
+        .prod-item__feat
+          ul
+            li
+              p
+                strong Самовывоз
+                |  с самого большого склада-магазина в Крыму по адресу: г. Симферополь ул. Автомобилистов 2
+
+            li
+              p
+                strong Бесплатная доставка
+                |  по Крыму уже на следующий день
+                strong  при заказе от 2500 Р
+
+            li
+              p
+                strong Доставка по РФ
+                |  транспортными компаниями: ПЭК, КИТ, Деловые&nbsp;линии и др
+
+          p
+            strong Оплата:
+          ul
+            li Наличными
+            li На расчетный счет
+
+      .prod-item__descr
+        ul.prod-item__descr-nav
+          li.current
+            a(href="#prod-item__descr-tab-0") Описание
+          li
+            a(href="#prod-item__descr-tab-1") Состав
+
+        ul.prod-item__descr-tabs
+          li.prod-item__descr-tab#prod-item__descr-tab-0
+            p
+              strong Состав:
+            p Пшеничная мука, какао крем 30%, сахар, растительное масло (пальма) какао порошок (10%), пюре лесного ореха, сухое цельное молоко, эмульгатор( соевый лицетин), сухая молочная сыворотка, кукурузный крахмал, соль, ароматизаторы ( лесной орех, шоколад), сахар, растительное масло (пальма), глюкозный сироп, яйцо, соль, разрыхлитель ( гидрокарбонат натрия, дигидропирофосфат натрия), эмульгатор ( эфиры полиглицерина и жирных кислот),ароматизаторы ( сливки, кокос, этилванилин). Аллергенное предупреждение: Содержит пшеничную клейковину, лесной орех, молоко, соевые продукты, яйцо. Может так же содержать следы фисташек.
+            br
+            p
+              strong Условия хранения:
+            p Хранить при t 18+/-5°С, относительной влажности воздуха не менее 75%
+          li.prod-item__descr-tab#prod-item__descr-tab-1
+            p
+              strong Состав:
+            p Пшеничная мука, какао крем 30%, сахар, растительное масло (пальма) какао порошок (10%), пюре лесного ореха, сухое цельное молоко, эмульгатор( соевый лицетин)
+
+
+
+  // /.scr_prod-item

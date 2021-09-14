@@ -1,0 +1,153 @@
+.modal
+  position: relative
+  display: block
+  position: fixed
+  top: 0
+  left: 0
+  right: auto
+  bottom: auto
+  width: 100%
+  min-height: 0
+  background-color: rgba(0,0,0,0.4)
+  z-index: 1000
+  opacity: 0
+  overflow: hidden
+  &.active
+    display: block
+    opacity: 1
+    min-height: 100vh
+  &__content
+    display: flex
+    justify-content: center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+
+    width: 375px
+    max-width: 100%
+    background: #fff
+    opacity: 0
+    transition: 0.7s
+    z-index: 1
+    overflow: hidden
+
+    &.visible
+      opacity: 1
+
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      bottom: -1px
+      display: block
+      width: 248px
+      height: 239px
+      background: transparent url('../img/svg/decor-wrap.svg') no-repeat center center
+      background-size: contain
+      z-index: -1
+    &::before
+      left: -184px
+    &::after
+      right: -184px
+
+  .form
+    max-height: 100vh
+    overflow: auto
+    width: 100%
+    padding: 48px 52px 27px
+    z-index: 0
+    background-color: transparent
+    &__title
+      margin-bottom: 48px
+      font-size: 33.5px
+    .text-input
+      margin-bottom: 20px
+    .accept
+      width: calc(100% + 40px)
+      margin-left: -20px
+    &__item
+      &--submit
+        margin-top: 48px
+        margin-bottom: 44px
+
+  .close
+    background: none
+    border: none
+    outline: none
+
+    cursor: pointer
+    z-index: 300
+    transition: 0.3s
+
+    position: absolute
+    top: 9px
+    right: 9px
+
+    display: block
+    width: 30px
+    height: 30px
+    &::before,&::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+
+      display: block
+      width: 20px
+      height: 3px
+      background-color: #bebebe
+      border-radius: 1.5px
+      transition: 0.3s
+
+    &::before
+      transform: translate(-50%,-50%) rotate(45deg)
+
+    &::after
+      transform: translate(-50%,-50%) rotate(-45deg)
+
+    &:hover
+      &::before,&::after
+        background-color: $accent
+
+  &__job
+    .form
+      padding-left: 32px
+      padding-right: 32px
+      .text-input
+        margin-bottom: 10px
+    .form__title
+      margin-bottom: 19px
+      font-size: 24px
+      line-height: 1.2
+      font-weight: 700
+    .form__item--submit
+      margin-top: 18px
+      margin-bottom: 24px
+
+
+  @media screen and (max-width: 575px)
+    &__content
+      &::before
+        left: -200px
+      &::after
+        right: -200px
+    .form
+      padding: 40px 30px 27px
+      &__title
+        margin-bottom: 22px
+        font-size: 30px
+      .text-input
+        margin-bottom: 16px
+      &__item
+        &--submit
+          margin-top: 30px
+          margin-bottom: 28px
+    &__job
+      .form__title
+        margin-bottom: 15px
+        font-size: 22px
+
+  // max-width 575px
+
+ /* modal */

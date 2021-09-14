@@ -1,0 +1,59 @@
+mixin script-map()
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript" unselectable="on" scroll="false")
+  script.
+    (function($){
+      createMap('scr_map',[44.957034, 34.154685],[44.957086, 34.152973]);
+
+      function createMap(xID,coords,xCenter) {
+
+        if ($("#" + xID + "").length > 0) {
+
+          var myMap;
+
+          // Дождёмся загрузки API и готовности DOM.
+          ymaps.ready(init);
+
+          function init () {
+              myMap = new ymaps.Map(xID, {
+                  center: xCenter,
+                  zoom: 17
+              }, {
+                  searchControlProvider: 'yandex#search'
+              });
+
+              // Создаём макет содержимого.
+                MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                ),
+
+                myPlacemark = new ymaps.Placemark(coords, {
+                    hintContent: 'улица Автомобилистов, 2',
+                    balloonContent: '<div class="balloon-df">' +
+                    '<div class="balloon-img"><img src="img/logo.png" height="50" width="50" data-object-fit-cover></div>'
+                    +'<div class="balloon-text"><strong>Склад-магазин:</strong><br>г. Симферополь, <br>ул. Автомобилистов, 2</div></div>' ,
+                    balloonCloseButton: false,
+                }, {
+                  // Опции.
+                  balloonPanelMaxMapArea: 0,
+                  openTimeout: 0,
+
+                  // Необходимо указать данный тип макета.
+                  iconLayout: 'default#image',
+                  // Своё изображение иконки метки.
+                  iconImageHref: 'img/svg/pin.svg',
+                  // Размеры метки.
+                  iconImageSize: [31, 41],
+                  // Смещение левого верхнего угла иконки относительно
+                  // её "ножки" (точки привязки).
+                  iconImageOffset: [-15, -60]
+                });
+
+            myMap.geoObjects
+                .add(myPlacemark);
+
+            myMap.behaviors.disable('scrollZoom');
+          }
+        }
+      }
+
+    })(jQuery);

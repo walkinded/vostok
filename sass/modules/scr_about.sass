@@ -1,0 +1,168 @@
+.about
+  position: relative
+  background-color: #fafafa
+  padding-top: 77px
+  padding-bottom: 77px
+  .title
+    margin-bottom: 54px
+    font-size: 30px
+    line-height: 1.2
+    padding-left: 30px
+    &::before
+      width: 2px
+  &__wrap
+    background-color: #ffffff
+    padding: 23px 21px 23px 51px
+  &__df
+    display: flex
+  &__content
+    flex-grow: 1
+    margin-top: 44px
+  &__desc
+    font-size: 20px
+  &__video
+    position: relative
+    display: block
+    text-decoration: none
+    outline: none
+
+    flex-shrink: 0
+    width: 440px
+    height: 336px
+    margin-left: 20px
+    background-color: #000000
+    overflow: hidden
+    img
+      display: block
+      height: 100%
+      opacity: 0.5
+      transition: 0.3s
+    &:hover
+      img
+        transition: 1s
+        transform: scale(1.1)
+    &-button
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 76px
+      height: 76px
+      background-color: $accent
+      border-radius: 50%
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        display: block
+        width: 20px
+        height: 20px
+        background: transparent url('../img/svg/icon-play.svg') no-repeat center center
+        background-size: contain
+      &::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        display: block
+        width: 206px
+        height: 198px
+        background: transparent url('../img/svg/icon-play-wrap.svg') no-repeat center center
+        background-size: contain
+    &-text
+      position: absolute
+      left: 23px
+      bottom: 15px
+      font-size: 18px
+      line-height: 1.333333333333333 /* 24 / 18 */
+      font-weight: 700
+      color: #ffffff
+      padding-right: 15px
+
+
+  @media screen and (max-width: 1400px)
+    padding-top: 37px
+    padding-bottom: 37px
+
+  // max-width 1400px
+
+  @media screen and (max-width: 1170px)
+    &__wrap
+      padding: 23px 21px
+    .title
+      margin-bottom: 34px
+      font-size: 27px
+    &__desc
+      font-size: 18px
+
+  // max-width 1170px
+
+  @media screen and (max-width: 991px)
+    &__wrap
+      width: calc(100% + 30px)
+      margin-left: -15px
+    .title
+      font-size: 20px
+      padding-left: 20px
+      br
+        display: none
+    &__video
+      width: 320px
+      height: 236px
+      &-button
+        width: 56px
+        height: 56px
+        &::after
+          width: 156px
+          height: 148px
+      &-text
+        font-size: 14px
+    &__desc
+      font-size: 16px
+
+  // max-width 991px
+
+  @media screen and (max-width: 767px)
+    .title
+      margin-bottom: 20px
+      font-size: 17px
+      padding-left: 15px
+    &__video
+      width: 280px
+      height: 216px
+      &-button
+        width: 46px
+        height: 46px
+        &::before
+          width: 15px
+          height: 15px
+        &::after
+          width: 136px
+          height: 128px
+      &-text
+        font-size: 13px
+    &__desc
+      font-size: 14px
+      br
+        display: none
+
+  // max-width 767px
+
+  @media screen and (max-width: 600px)
+    padding-top: 27px
+    padding-bottom: 27px
+    &__df
+      flex-direction: column
+    &__video
+      margin-left: auto
+      margin-right: auto
+      margin-top: 25px
+    &__content
+      margin-top: 0
+
+  // max-width 600px
+
+/* about */

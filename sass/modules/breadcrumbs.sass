@@ -1,0 +1,26 @@
+.breadcrumbs
+  position: relative
+  ol
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      position: relative
+      display: inline-block
+
+      a,
+      span span
+        font-size: 12px
+        line-height: 1.5
+        color: #666666
+
+        text-decoration: none
+        transition: 0.3s
+        &[href]:hover
+          color: $accent
+
+      &:not(:last-of-type)
+        &::after
+          content: '/'
+          font-size: 11px
+          margin: 0 4px

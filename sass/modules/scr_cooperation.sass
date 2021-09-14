@@ -1,0 +1,122 @@
+.cooperation
+  position: relative
+  background-color: #fafafa
+  .page-top
+    margin-bottom: 20px
+  .title--second
+    margin-bottom: 24px
+  &__wrap
+    margin-bottom: 37px
+    padding: 57px 30px 35px 66px
+  &__feat
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    & > li
+      width: 38.27751196172249%
+      padding-right: 20px
+      &:nth-of-type(2)
+        width: 31.57894736842105%
+        .cooperation__feat-icon
+          padding-top: 4px
+          img
+            max-width: 52px
+      &:last-of-type
+        width: 30.62200956937799%
+        padding-right: 0
+        .cooperation__feat-icon
+          padding-top: 4px
+    &-item
+      display: flex
+    &-icon
+      width: 82px
+      margin-right: 23px
+      padding-top: 14px
+      img
+        display: block
+    &-text
+      max-width: 200px
+      font-size: 20px
+      line-height: 1.2 /* 24 / 20 */
+  .faq__form
+    padding-top: 37px
+    padding-bottom: 37px
+    .form__item--submit
+      margin-top: 20px
+  &__add
+    max-width: 710px
+    margin-top: 50px
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+      margin-top: 20px
+      li
+        transform: none
+
+
+  @media screen and (max-width: 1070px)
+    &__wrap
+      padding: 37px 30px 35px
+    &__feat
+      &-text
+        font-size: 16px
+      &-icon
+        width: 72px
+        margin-right: 13px
+
+  // max-width 1070px
+
+  @media screen and (max-width: 991px)
+    &__wrap
+      padding: 37px 15px 35px
+    &__feat
+      &-text
+        font-size: 14px
+      &-icon
+        width: 62px
+    &__add
+      margin-top: 30px
+
+  // max-width 991px
+
+  @media screen and (max-width: 767px)
+    &__feat
+      & > li
+        padding-right: 10px
+      &-text
+        font-size: 12px
+
+  // max-width 767px
+
+  @media screen and (max-width: 575px)
+    &__wrap
+      margin-bottom: 27px
+    &__feat
+      flex-direction: column
+      & > li
+        width: 100%
+        margin-bottom: 15px
+        padding-right: 0
+        &:nth-of-type(2)
+          width: 100%
+        &:last-of-type
+          width: 100%
+      &-text
+        font-size: 15px
+        br
+          display: none
+      &-icon
+        padding-top: 0 !important
+
+  // max-width 575px
+
+  @media screen and (max-width: 400px)
+    &__feat
+      &-text
+        font-size: 14px
+
+  // max-width 400px
+
+/* cooperation */

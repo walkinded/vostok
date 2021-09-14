@@ -1,0 +1,23 @@
+mixin scr_cta()
+  section.scr_cta.cta(id="scr_cta")
+    .container
+      .cta__df
+        .cta__title
+          p
+            strong.accent Узнавайте первыми
+            br
+            |  о скидках и специальных предложениях
+
+        .cta__form
+          .form.wpcf7
+            form.wpcf7-form
+              .form__item
+                span.wpcf7-form-control-wrap.your-email.text-input
+                  input.wpcf7-form-control.wpcf7-text.wpcf7-email(type='email', name='your-email', value='', size='40', aria-required='true', aria-invalid='false', placeholder='Электронная почта')
+
+              .form__item.form__item--submit
+                .btn__wrap
+                  input.wpcf7-form-control.wpcf7-submit.btn.btn--red(type='submit', value='Подписаться')
+
+
+  // /.scr_cta

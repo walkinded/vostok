@@ -1,0 +1,1277 @@
+::selection
+  background-color: $accent
+  color: #fff
+
+*
+  margin: 0
+  padding: 0
+
+html, body
+  max-width: 100%
+  overflow-x: hidden
+
+body
+  position: relative
+  width: 100%
+  height: 100%
+
+  font-family: $font
+  font-size: 16px
+  line-height: 1.5 /* 24px / 16px */
+  font-weight: 400
+  color: $body-color
+
+  background-color: #fff
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+  &.disabled
+    overflow: hidden
+    max-height: 100vh
+
+.page_wr
+  flex-grow: 1
+  &--second
+    padding-top: 157px
+
+img
+  width: 100%
+  height: auto
+  border: none
+  user-select: none
+
+[data-object-fit-cover]
+  object-fit: cover
+  object-position: center
+  font-family: 'object-fit: cover; object-position: center;'
+  width: 100%
+  height: 100%
+
+[data-object-fit-contain]
+  object-fit: contain
+  object-position: center
+  font-family: 'object-fit: contain; object-position: center;'
+  width: 100%
+  height: 100%
+
+a
+  color: $body-color
+
+.blur-it
+  filter: blur(4px)
+
+.accent
+  color: $accent
+
+.decor-wrap
+  background-color: #ffffff
+  border: 1.0px solid rgba(228,233,218,0.7)
+
+h1,h2,h3,h4,h5,h6
+  font-family: $title-font
+
+.article
+  p
+    margin-bottom: 12px
+  a
+    text-decoration: none
+    transition: 0.3s
+    &:hover
+      text-decoration: underline
+
+  img
+    width: auto
+    max-width: 100%
+    height: auto
+    display: block
+    &.alignleft
+      max-width: 57.01754385964912%
+      float: left
+      margin: 0 20px 10px 0
+    &.alignright
+      max-width: 57.01754385964912%
+      float: right
+      margin: 0 0 10px 20px
+    &.aligncenter
+      margin: 0 auto
+  ul
+    padding-bottom: 1.5em
+    padding-left: 0
+    padding-right: 1.5em
+  ul li
+    transform: translateX(1.5em)
+  ul
+    & > li
+      position: relative
+      margin-bottom: 10px
+      // padding-left: 28px
+      display: flex
+      &:last-of-type
+        margin-bottom: 0
+      &::before
+        content: ''
+        flex-shrink: 0
+        display: block
+        width: 6px
+        height: 6px
+        margin-top: 6px
+        margin-right: 22px
+        background-color: $accent
+        border-radius: 50%
+
+  ul.with-ticks
+    max-width: 390px
+    padding-top: 40px
+    padding-right: 50px
+    margin-left: auto
+    & > li
+      margin-bottom: 35px
+      &:last-of-type
+        margin-bottom: 15px
+      &::before
+        width: 20px
+        height: 15px
+        margin-top: 2px
+        background: transparent url('../img/svg/icon-tick.svg') no-repeat center center
+        background-size: contain
+  ol
+    counter-reset: myCounter
+    display: flex
+    flex-wrap: wrap
+    margin-top: 70px
+    margin-bottom: 70px
+    li
+      width: calc(50% - 28px)
+      list-style: none
+      padding-left: 57px
+      margin-right: 56px
+      margin-bottom: 20px
+      position: relative
+      color: #666666
+
+      &:nth-of-type(2n)
+        margin-right: 0
+      &::before
+        position: absolute
+        top: 0
+        left: 0
+        counter-increment: myCounter
+        content: counter(myCounter) "."
+        font-size: 32px
+        line-height: 48px
+        font-weight: 400
+        text-transform: uppercase
+        color: #000
+
+  h2,h3,h4
+    line-height: 1.2
+    font-weight: 700
+
+  h2
+    margin-top: 35px
+    margin-bottom: 20px
+    font-size: 26px
+  h3
+    margin-top: 25px
+    margin-bottom: 15px
+    font-size: 22px
+  h4
+    margin-top: 20px
+    margin-bottom: 10px
+    font-size: 18px
+
+  .with-img
+    width: 100%
+    padding-top: 58px
+    margin-bottom: 52px
+    display: flex
+    align-items: center
+    &__img
+      flex-shrink: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 164px
+      height: 164px
+      margin-right: 41px
+      border-radius: 50%
+      overflow: hidden
+      img
+        display: block
+        height: 100%
+    &__name
+      display: block
+      margin-right: 15px
+      color: #686a6c
+      font-size: 16px
+      strong
+        color: #000000
+        font-size: 24px
+    &__text
+      display: block
+      max-width: 583px
+      margin-left: auto
+      padding-right: 40px
+
+  .with-bg
+    position: relative
+    display: block
+    padding-top: 62px
+    padding-bottom: 61px
+    margin-top: 20px
+    margin-bottom: 48px
+    span
+      position: relative
+      display: block
+      padding: 84px 77px 90px 71px
+      border: 1px solid rgba(228, 233, 218, 0.7)
+      background-color: #ffffff
+      &::before,
+      &::after
+        content: ''
+        position: absolute
+        display: block
+        width: 35px
+        height: 23px
+        background: transparent url('../img/quotes.png') no-repeat center center
+        background-size: contain
+      &::before
+        top: 40px
+      &::after
+        right: 87px
+        bottom: 40px
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 100vw
+      height: 100%
+      background: transparent url('../img/categories-bg.jpg') repeat center center
+
+.grey-bg
+  background-color: #efeeed
+
+.clearfix
+  &::after
+    display: table
+    clear: both
+    content: ""
+
+.title
+  position: relative
+  margin-top: 0
+  margin-bottom: 25px
+  padding-left: 21px
+  font-size: 36px
+  line-height: 1.2
+  font-weight: 700
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    display: block
+    width: 3px
+    height: calc(100% - 8px)
+    min-height: 38px
+    background-color: $accent
+  &--second
+    margin-top: 0
+    margin-bottom: 16px
+    font-size: 28px
+    font-weight: 700
+
+.icon
+  max-width: 100%
+  max-height: 100%
+  fill: $icon
+  transition: 0.5s
+
+.link
+  transition: 0.3s
+
+.btn,
+input[type="submit"]
+  position: relative
+
+  border: none
+  outline: none
+  background: none
+
+  cursor: pointer
+  text-decoration: none
+  transition: 0.5s
+  -webkit-appearance: none
+
+.btn,
+input[type="submit"].btn
+  &--red
+    padding-left: 27px
+    padding-right: 27px
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 50px
+    background-color: $accent
+    border-radius: 24.5px
+    text-align: center
+    font-size: 17px
+    line-height: 1.2
+    font-weight: 700
+    color: #ffffff
+    border: 1px solid $accent
+    transition: 0.3s
+    &:hover
+      background-color: #fff
+      color: $accent
+  &--circle
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 38px
+    height: 38px
+    border-radius: 50%
+    background-color: #efeeed
+    // border: 1px solid $accent
+    .fa
+      color: $accent
+      font-weight: 700
+      font-size: 20px
+
+.btn__wrap
+  display: inline-block
+
+input[type="submit"]
+  &[disabled]
+    cursor: no-drop
+    background: #5e5e5e
+
+.burger
+  flex-shrink: 0
+  position: relative
+  background: none
+  outline: none
+  border: none
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+
+  width: 25px
+  height: 25px
+  &__wrap
+    position: relative
+    transition: 0.3s
+
+    z-index: 100
+    display: block
+
+  &.active
+    .burger__wrap
+      .line
+        transform: translate(-50%,-50%) rotate(45deg)
+        &:before,
+        &:after
+          transform: translateX(0) rotate(-90deg)
+
+  .line
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    &,
+    &::after,
+    &::before
+      position: absolute
+      display: block
+      width: 20px
+      height: 2px
+      background-color: $accent
+      transition: 0.2s ease-in-out
+
+    &::after,
+    &::before
+      content: ''
+      left: 0
+    &::before
+      transform: translateY(-7px)
+    &::after
+      transform: translateY(7px)
+
+.to-top
+  position: fixed
+  right: 20px
+  bottom: 20px
+  z-index: 100
+  text-decoration: none
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 37px
+  background: rgba($accent, 0.8)
+  border-radius: 6px
+  box-shadow: 0px 0px 10px 0px rgba($accent,0.3)
+  cursor: pointer
+  transition: 0.5s
+  opacity: 0
+  height: 0
+  overflow: hidden
+  z-index: 250
+  .fa
+    color: #fff
+    transition: 0.5s
+    font-size: 18px
+    font-weight: 800
+
+  &:hover
+    opacity: 1
+    box-shadow: 0px 0px 10px 0px rgba($accent,0.7)
+
+  &.fixed
+    opacity: 1
+    height: 37px
+
+.page-top
+  position: relative
+  background-color: $accent
+  background-image: linear-gradient(180.0deg, #ff0000 0%, #cc0000 100%)
+  z-index: 50
+  .burger
+    display: none
+  .menu
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    z-index: 1
+    position: relative
+    & > li
+      flex-grow: 1
+      & > a
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        text-decoration: none
+        outline: none
+        padding-left: 10px
+        padding-right: 10px
+        height: 60px
+        transition: 0.3s
+        font-size: 14px
+        line-height: 1.2
+        font-weight: 700
+        text-transform: uppercase
+        color: #ffffff
+        &:hover
+          background-color: $accent
+      &:nth-last-of-type(2)
+        & > a
+          position: relative
+          padding-left: 43px
+          &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 12px
+            transform: translateY(-50%)
+            display: block
+            width: 26px
+            height: 19px
+            background: transparent url('../img/svg/icon-flag.svg') no-repeat center center
+            background-size: contain
+      &:last-of-type
+        margin-right: -1px
+        & > a
+          position: relative
+          padding-left: 43px
+          &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -1
+            display: block
+            width: 100%
+            height: 100%
+            background-image: linear-gradient(180.0deg, #92cf5c 0%, #66a90f 100%)
+          &:hover
+            background-color: #66a90f
+          &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 7px
+            transform: translateY(-50%)
+            display: block
+            width: 27px
+            height: 17px
+            background: transparent url('../img/svg/icon-map.svg') no-repeat center center
+            background-size: contain
+
+      .arrow
+        display: none
+  .sub-menu
+    max-height: 0
+    overflow: hidden
+    margin: 0
+    padding: 0
+    list-style: none
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    background-color: #fff
+    box-shadow: 0 3px 10px #c4c4c4
+    z-index: 100
+    transition: max-height 0.5s padding 0 0.5s
+    &.active
+      max-height: 1000px
+      padding: 31px 10px 32px 74px
+      transition: max-height 0.5s
+    & > li
+      margin-bottom: 12px
+      padding-right: 15px
+      &:last-of-type
+        padding-right: 0
+      & > a
+        display: flex
+        text-decoration: none
+        outline: none
+        transition: 0.3s
+        i
+          display: block
+          vertical-align: middle
+          width: 37px
+          height: 37px
+          margin-right: 12px
+          img
+            display: block
+            width: 100%
+            height: 100%
+        span
+          display: block
+          padding-top: 5px
+          vertical-align: middle
+
+        &:hover
+          color: $accent
+  &__show
+    background: none
+    border: none
+    outline: none
+
+    position: fixed
+    top: 50%
+    left: -60px
+    transform: rotate(90deg) translateY(-50%)
+    display: none
+    align-items: center
+    justify-content: center
+    width: 120px
+    height: 20px
+    padding-top: 4px
+    z-index: 500
+    text-align: center
+    background: $accent
+    color: #fff
+    border-top-left-radius: 8px
+    border-top-right-radius: 8px
+    line-height: 1
+    font-weight: 700
+    text-transform: uppercase
+    cursor: pointer
+    &.active
+      display: flex
+  &.fixed
+    transform: translateX(-110%)
+    position: fixed
+    top: 0
+    left: 0
+    width: 350px
+    max-width: 100%
+    padding-top: 15px
+    padding-left: 15px
+    padding-right: 15px
+    padding-bottom: 15px
+    height: 100vh
+    overflow: auto
+    background: #fff
+    box-shadow: 0 0 15px rgba(#000, 0.1)
+    z-index: 500
+    &.active
+      transform: translateX(0)
+      transition: 1s
+    .burger
+      display: flex
+      margin-left: 10px
+    .menu
+      flex-direction: column
+      & > li
+        position: relative
+        & > a
+          color: $accent
+          font-weight: 700
+          text-align: left
+          padding: 7px 0
+          padding-left: 10px
+          border-bottom: 1px solid rgba(#000, 0.1)
+          justify-content: flex-start
+          font-size: 14px
+          &:hover
+            background: none
+        &:nth-last-of-type(2)
+          & > a
+            background-image: linear-gradient(180.0deg, #ff0000 0%, #cc0000 100%)
+            color: #fff
+            padding-left: 40px
+        &:last-of-type
+          & > a
+            color: #fff
+            padding-left: 40px
+        .arrow
+          position: absolute
+          top: 5px
+          right: 0
+          display: block
+          width: 25px
+          height: 25px
+          background: transparent url('../img/svg/arrow.svg') no-repeat center center
+          background-size: 16px 10px
+          transform: rotate(90deg)
+          cursor: pointer
+          transition: 0.3s
+          transform-origin: center
+          &.active
+            transform: rotate(-90deg)
+
+
+    .sub-menu
+      position: static
+      background: none
+      box-shadow: none
+
+  &.fixedtr
+    transition: 0.3s
+
+.quantity
+  display: flex
+  align-items: center
+  max-width: 110px
+  height: 38px
+  border: 1.0px solid #dce0e5
+  background-color: #ffffff
+  border-radius: 19.0px
+  input
+    border: none
+    outline: none
+    background: none
+
+    display: block
+    width: 35px
+    height: 100%
+    border-left: 1px solid #dce0e5
+    border-right: 1px solid #dce0e5
+
+    font-size: 18px
+    font-weight: 700
+    text-align: center
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    margin: 0
+  &-arrow
+    position: relative
+    background: none
+    outline: none
+    border: none
+
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    width: 35px
+    height: 100%
+
+    cursor: pointer
+    font-size: 18px
+    transition: 0.3s
+    &:hover
+      color: $accent
+
+.show-items
+  position: relative
+  input
+    border: none
+    outline: none
+    background: none
+
+    display: block
+    width: 70px
+    height: 40px
+    padding-left: 15px
+    background-color: #ffffff
+    border: 1.0px solid #cccccc
+
+    font-size: 14px
+    line-height: 1.2
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    margin: 0
+  &-arrow
+    position: absolute
+    right: 10px
+    background: none
+    outline: none
+    border: none
+
+    width: 6px
+    height: 10px
+    background: transparent url('../img/svg/arrow-black.svg') no-repeat center center
+    background-size: contain
+
+    cursor: pointer
+    &-minus
+      bottom: 9px
+      transform: rotate(90deg)
+    &-plus
+      top: 10px
+      transform: rotate(-90deg)
+
+
+.show-more
+  &__wrap
+    position: relative
+    padding: 33px 57px 60px 47px
+    background-color: #ffffff
+  &__btns
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    text-align: center
+    z-index: 10
+    button
+      background: none
+      border: none
+      outline: none
+
+      display: block
+      width: 100%
+      padding-top: 60px
+      padding-bottom: 30px
+      background-image: linear-gradient(180deg, rgba(#fff,0) 0%, #fff 70%, #fff 100%)
+
+      font-size: 14px
+      line-height: 1.2
+      font-weight: 600
+      text-align: center
+      cursor: pointer
+      transition: 0.3s
+      z-index: 1
+      span
+        position: relative
+        display: inline-block
+        &::after
+          content: ''
+          position: absolute
+          bottom: -16px
+          left: calc(50% - 3px)
+
+          display: block
+          width: 8px
+          height: 13px
+          transform: rotate(90deg)
+          background: transparent url('../img/svg/arrow.svg') no-repeat center center
+          background-size: contain
+          transition: 0.3s
+      &:hover
+        color: $accent
+      &.active
+        padding-top: 60px
+        span
+          &::after
+            transform: rotate(-90deg)
+  &__content
+    max-height: 120px
+    overflow: hidden
+    transition: 0s
+    &.opened
+      max-height: 10000px
+      transition: padding 0.4s, max-height 1s
+      overflow: visible
+      padding-bottom: 20px
+    .article
+      p
+        font-size: 14px
+
+
+/* Переопределение стилей yandex map */
+.balloon-df
+  position: relative
+  display: flex
+  box-shadow: 1px 3px 10px 0px #c3c3c3
+  width: 300px
+  padding: 19px 10px
+  background-color: #ffffff
+  z-index: 1
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    display: block
+    width: calc(100% - 18px)
+    height: calc(100% - 18px)
+    transform: translate(-50%, -50%)
+    border: 1.0px solid #ed1c28
+    z-index: -1
+.balloon-text
+  padding-top: 7px
+  font-size: 14px
+  line-height: 1.2
+  strong
+    font-weight: 700
+.balloon-img
+  flex-shrink: 0
+  width: 126px
+  height: 70px
+  margin-left: -37px
+  margin-right: 15px
+  filter: drop-shadow(1px 3px 5px rgba(#c3c3c3,0.1))
+
+[class$='-balloon__content']
+  background: none !important
+  & > ymaps
+    overflow: visible !important
+[class$='-balloon__layout']
+  overflow: visible !important
+  background: none !important
+[class$='-balloon-overlay']
+  & > ymaps > ymaps
+    box-shadow: none !important
+
+[class$='-controls-pane'],
+[class$='-copyrights-pane']
+  display: none
+[class*="ymaps-2"][class*="-ground-pane"]
+  filter: grayscale(100%)
+
+/* Переопределение стилей swiper */
+.swiper-wrapper
+  & *
+    box-sizing: border-box
+.swiper-dots
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin-top: 34px
+.swiper-pagination-bullet
+  outline: none
+  display: block
+  background: $accent
+  width: 7px
+  height: 7px
+  margin: 0 4px
+  opacity: 0.5
+.swiper-pagination-bullet-active
+  position: relative
+  opacity: 1
+.swiper-button-prev,
+.swiper-button-next
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  background: none
+  border: none
+  outline: none
+  width: 40px
+  height: 40px
+  margin: 0
+  background-color: #ffffff
+  border-radius: 50%
+  transition: 0.3s
+  &::after
+    content: ''
+    position: absolute
+    top: calc(50% - 5px)
+    left: calc(50% - 3px)
+    display: block
+    width: 6px
+    height: 11px
+    background: transparent url('../img/svg/arrow.svg') no-repeat center
+    center
+    background-size: contain
+  &:hover
+    box-shadow: 0 4px 15px rgba(#000, 0.1)
+.swiper-button-prev
+  left: -18px
+  &::after
+    transform: rotate(180deg)
+.swiper-button-next
+  right: -18px
+
+.swiper-pagination-lock
+  display: none
+
+
+/* Переопределение nice-select */
+.nice-select
+  width: 158px
+  height: 40px
+  border-radius: 0
+  border: 1.0px solid #cccccc
+  &::after
+    border: none
+    width: 6px
+    height: 10px
+    background: transparent url('../img/svg/arrow-black.svg') no-repeat center
+    center
+    background-size: contain
+    transform: rotate(90deg)
+    transform-origin: center center
+  &.open
+    &::after
+      transform: rotate(-90deg)
+  .list
+    width: 100%
+
+/* Переопределение bootstrap */
+@media (min-width: 1200px)
+  .container
+    max-width: 1170px
+
+/* media */
+@media screen and (max-width: 1400px)
+  .page_wr
+    &--second
+      padding-top: 130px
+  .page-top .menu > li > a
+    height: 50px
+    font-size: 12px
+  .title
+    font-size: 33px
+
+// max-width 1400px
+
+@media screen and (max-width: 1200px)
+  .container
+    max-width: 100%
+  .title
+    font-size: 30px
+  .page-top
+    .sub-menu
+      &.active
+        padding: 31px 15px
+
+// max-width 1200px
+
+@media screen and (max-width: 1070px)
+  .page-top .menu > li > a
+    height: 50px
+    font-size: 11px
+  .page-top .menu > li:nth-last-of-type(2) > a::before
+    width: 20px
+    height: 15px
+  .page-top .menu > li:nth-last-of-type(2) > a
+    padding-left: 33px
+
+// max-width 1070px
+
+@media screen and (max-width: 991px)
+  .title
+    font-size: 24px
+  .btn,
+  input[type="submit"].btn
+    &--red
+      height: 48px
+      font-size: 14px
+  .page-top
+    .menu
+      // overflow: auto
+      & > li
+        & > a
+          height: 40px
+          font-size: 10px
+          // white-space: nowrap
+    .sub-menu
+      & > li
+        padding-right: 10px
+        & > a
+          i
+            width: 31px
+            height: 31px
+            margin-right: 10px
+          span
+            font-size: 13px
+  .show-more
+    &__wrap
+      padding: 33px 20px 60px
+  .title--second
+    font-size: 25px
+  .article
+    ul
+      li
+        font-size: 14px
+    ul.with-ticks
+      padding-right: 20px
+      & > li
+        margin-bottom: 25px
+    .with-img
+      padding-top: 28px
+      &__img
+        width: 134px
+        height: 134px
+        margin-right: 31px
+      &__text
+        max-width: 393px
+        padding-right: 0
+      &__name
+        font-size: 14px
+        strong
+          font-size: 21px
+
+// max-width 991px
+
+@media screen and (max-width: 950px)
+  .page_wr
+    &--second
+      padding-top: 118px
+
+// max-width 950px
+
+@media screen and (max-width: 850px)
+  .balloon-df
+    width: 250px
+  .balloon-text
+    font-size: 13px
+
+// max-width 850px
+
+@media screen and (min-width: 768px)
+  .page-top
+    &:not(.fixed)
+      .sub-menu
+        columns: 3
+        column-gap: 0
+
+// min-width 768px
+
+@media screen and (max-width: 767px)
+  .page_wr
+    &--second
+      padding-top: 70px
+  .title
+    font-size: 21px
+  .title--second
+    font-size: 23px
+  .swiper-dots
+    margin-top: 15px
+  // .page-top
+  //   transform: translateX(-110%)
+  //   position: fixed
+  //   top: 0
+  //   left: 0
+  //   width: 350px
+  //   max-width: 100%
+  //   padding-top: 15px
+  //   padding-left: 15px
+  //   padding-right: 15px
+  //   padding-bottom: 15px
+  //   height: 100vh
+  //   overflow: auto
+  //   background: #fff
+  //   box-shadow: 0 0 15px rgba(#000, 0.1)
+  //   z-index: 500
+  //   transition: 0.3s
+  //   &.active
+  //     transform: translateX(0)
+  //     transition: 1s
+  //   .burger
+  //     display: flex
+  //     margin-left: 10px
+  //   .menu
+  //     flex-direction: column
+  //     & > li
+  //       position: relative
+  //       & > a
+  //         color: $accent
+  //         font-weight: 700
+  //         text-align: left
+  //         padding: 7px 0
+  //         padding-left: 10px
+  //         border-bottom: 1px solid rgba(#000, 0.1)
+  //         justify-content: flex-start
+  //         font-size: 14px
+  //         &:hover
+  //           background: none
+  //       &:nth-last-of-type(2)
+  //         & > a
+  //           background-image: linear-gradient(180.0deg, #ff0000 0%, #cc0000 100%)
+  //           color: #fff
+  //           padding-left: 40px
+  //       &:last-of-type
+  //         & > a
+  //           color: #fff
+  //           padding-left: 40px
+  //       .arrow
+  //         position: absolute
+  //         top: 5px
+  //         right: 0
+  //         display: block
+  //         width: 25px
+  //         height: 25px
+  //         background: transparent url('../img/svg/arrow.svg') no-repeat center center
+  //         background-size: 16px 10px
+  //         transform: rotate(90deg)
+  //         cursor: pointer
+  //         transition: 0.3s
+  //         transform-origin: center
+  //         &.active
+  //           transform: rotate(-90deg)
+
+  //   .sub-menu
+  //     position: static
+  //     background: none
+  //     box-shadow: none
+
+  .article
+    ul
+      li
+        margin-bottom: 6px
+    ul.with-ticks
+      padding-top: 10px
+      & > li
+        margin-bottom: 15px
+        &::before
+          margin-right: 4px
+    ol
+      margin-top: 30px
+      margin-bottom: 20px
+      li
+        padding-left: 37px
+        margin-right: 36px
+    .with-img
+      margin-bottom: 32px
+      &__img
+        width: 104px
+        height: 104px
+        margin-right: 21px
+      &__text
+        max-width: 303px
+        font-size: 14px
+      &__name
+        font-size: 13px
+        strong
+          font-size: 17px
+    .with-bg
+      padding-top: 32px
+      padding-bottom: 31px
+      span
+        padding: 44px 27px 40px 31px
+
+// max-width 767px
+
+@media screen and (max-width: 700px)
+  .page_wr
+    &--second
+      padding-top: 70px
+  .article
+    font-size: 14px
+    .with-bg
+      span
+        &::before,
+        &::after
+          width: 27px
+          height: 17px
+        &::before
+          top: 20px
+        &::after
+          bottom: 20px
+          right: 27px
+    ul.with-ticks
+      li
+        font-size: 14px
+    h2
+      margin-top: 25px
+      margin-bottom: 15px
+      font-size: 22px
+    h3
+      margin-top: 20px
+      margin-bottom: 10px
+      font-size: 18px
+    h4
+      font-size: 16px
+
+// max-width 700px
+
+@media screen and (max-width: 575px)
+  .page_wr
+    &--second
+      padding-top: 67px
+  .title
+    font-size: 18px
+  .title--second
+    font-size: 20px
+  .article
+    .with-img
+      flex-wrap: wrap
+      margin-bottom: 22px
+      padding-top: 0
+      &__name
+        padding-top: 10px
+      &__text
+        max-width: 100%
+        margin-left: 0
+        margin-top: 25px
+  .nice-select
+    font-size: 16px
+    border: none
+    background: none
+    padding-left: 0
+
+// max-width 575px
+
+@media screen and (max-width: 500px)
+  .article
+    img.alignleft,
+    img.alignlright
+      float: none
+      max-width: 100%
+      margin-left: auto
+      margin-right: auto
+      padding-right: 0
+      padding-left: 0
+      padding-bottom: 20px
+    ul.with-ticks
+      margin-left: 0
+      padding-top: 0
+      & > li
+        margin-bottom: 8px
+        &::before
+          width: 14px
+          height: 11px
+    ol
+      flex-direction: column
+      & > li
+        width: 100%
+        margin-right: 0
+    h2
+      font-size: 20px
+
+// max-width 500px
+
+@media screen and (max-width: 410px)
+  .page_wr
+    &--second
+      padding-top: 63px
+
+// max-width 410px

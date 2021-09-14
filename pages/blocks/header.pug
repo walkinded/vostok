@@ -1,0 +1,92 @@
+mixin header(logotype)
+  header.header(id="header")
+    .header__top
+      .container
+        .header__menu
+          ul.menu
+            li.menu-item
+              a(href="#") О компании
+            li.menu-item
+              a(href="#") Сотрудничество
+            li.menu-item
+              a(href="#") Оплата и доставка
+            li.menu-item
+              a(href="#") Вопрос-ответ
+            li.menu-item
+              a(href="#") Полезная информация
+            li.menu-item
+              a(href="#") Отзывы
+            li.menu-item
+              a(href="#") Контакты
+
+      // /.container
+    // /.header__top
+
+    .container
+      .header__middle
+        button.burger#header-burger
+          span.burger__wrap
+            span.line
+
+        button.header__catalog Каталог
+
+        .logo__wrap
+          if logotype == "a"
+            #{logotype}.logo(href="index.html")
+              img(src="img/svg/logo.svg" alt="лого")
+          else
+            #{logotype}.logo
+              img(src="img/svg/logo.svg" alt="лого")
+
+          .logo__text Производство и продажа Крымских
+            br
+            |  и восточных сладостей и импорт
+            br
+            |  турецкой продукции
+
+        .header__total
+          .header__total-item.header__total-item--min
+            .header__total-icon
+              svg.icon
+                use(xlink:href="img/svg/sprite.svg#icon-bookmark")
+
+            span Минимальный заказ
+              strong  2 500 ₽
+
+          .header__total-item.header__total-item--all
+            .header__total-icon
+              span.header__total-count 5
+              svg.icon
+                use(xlink:href="img/svg/sprite.svg#icon-cart")
+
+            span Итого:
+              strong  2 500 ₽
+
+        .header__address
+          .header__text
+            p г. Симферополь,
+              br
+              |  ул. Автомобилистов, 2.
+
+          .header__text
+            p Режим работы:
+              br
+              |  пн - сб с 9-00 до 18-00
+
+        .header__phones
+          a.btn.btn--circle.mobile(href="tel:88002228353" rel="nofollow")
+            i.fa.fa-phone
+
+          .header__phones-item
+            a.header__phone(href="tel:88002228353" rel="nofollow") 8 (800) 222 83 53
+            span Бесплатно по Росии /
+              a(href="https://api.whatsapp.com/send?phone=88002228353" rel="nofollow")  WhatsApp
+
+          .header__phones-item
+            a.header__phone(href="tel:+79781003269" rel="nofollow") +7 (978) 100 32 69
+            span Для связи в Крыму
+
+
+      // /.header__top
+    // /.container
+

@@ -1,0 +1,91 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset="UTF-8")
+
+    title  |
+
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(name='format-detection', content='telephone=no')
+
+    // Template Basic Images Start
+    //- link(rel='icon', sizes='32x32', href='img/favicon/favicon-32x32.png')
+    //- link(rel='icon', sizes='16x16', href='img/favicon/favicon-16x16.png')
+    // Template Basic Images End
+
+    // Custom Browsers Color Start
+    meta(name='theme-color', content='#432928')
+    // Custom Browsers Color End
+
+    include blocks/scripts
+    include blocks/styles
+    include blocks/header
+
+
+    include blocks/footer
+    include blocks/socials
+
+
+    style.
+      .mmenu__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-top: 160px;
+        margin-bottom: 40px;
+      }
+      .mmenu__item {
+        padding: 10px 0;
+      }
+      .mmenu__link {
+        text-decoration: none;
+        color: #432928;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        font-size: 24px;
+      }
+      .mmenu__link:hover {
+        color: #8b0a0e;
+      }
+
+  body.main-page
+
+    +header("div")
+
+    #page_wr.page_wr
+
+      section.mmenu
+        .container
+          ul.mmenu__list
+            li.mmenu__item
+              a.mmenu__link(href='main.html') Главная
+            li.mmenu__item
+              a.mmenu__link(href='prod-item.html') Карточка
+            li.mmenu__item
+              a.mmenu__link(href='prod.html') Каталог
+            li.mmenu__item
+              a.mmenu__link(href='about.html') О компании
+            li.mmenu__item
+              a.mmenu__link(href='blog.html') Блог
+            li.mmenu__item
+              a.mmenu__link(href='contacts.html') Контакты
+            li.mmenu__item
+              a.mmenu__link(href='cooperation.html') Сотрудничество
+            li.mmenu__item
+              a.mmenu__link(href='deliver.html') Доставка
+            li.mmenu__item
+              a.mmenu__link(href='faq.html') Вопрос-ответ
+            li.mmenu__item
+              a.mmenu__link(href='post.html') Статья
+            li.mmenu__item
+              a.mmenu__link(href='reviews.html') Отзывы
+
+
+
+    +footer("div")
+
+    +styles
+    +scripts

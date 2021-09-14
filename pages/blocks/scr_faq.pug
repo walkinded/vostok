@@ -1,0 +1,100 @@
+mixin scr_faq()
+  section.scr_faq.faq(id="scr_faq")
+    .container
+      +page-top
+
+      h1.title--second Вопрос-ответ
+
+      ul.faq__list
+        li.faq__item
+          .top
+            h2.title Как часто появляются новинки?
+            button.open
+          .hidden
+            .article
+              p  Мы стараемся регулярно пополнять ассоримент новыми интереснымим товарами. Как правило раз в 2-3 месяца появляются новые позиции, чтобы порадовать наших постоянных покупателей.
+
+        li.faq__item
+          .top
+            h2.title Где производятся сладости?
+            button.open
+          .hidden
+            .article
+              p  Мы стараемся регулярно пополнять ассоримент новыми интереснымим товарами. Как правило раз в 2-3 месяца появляются новые позиции, чтобы порадовать наших постоянных покупателей.
+
+        li.faq__item
+          .top
+            h2.title Есть ли скидки на корпоративные заказы?
+            button.open
+          .hidden
+            .article
+              p  Мы стараемся регулярно пополнять ассоримент новыми интереснымим товарами. Как правило раз в 2-3 месяца появляются новые позиции, чтобы порадовать наших постоянных покупателей.
+
+        li.faq__item
+          .top
+            h2.title Где производится кофе и чай?
+            button.open
+          .hidden
+            .article
+              p  Мы стараемся регулярно пополнять ассоримент новыми интереснымим товарами. Как правило раз в 2-3 месяца появляются новые позиции, чтобы порадовать наших постоянных покупателей.
+
+        li.faq__item
+          .top
+            h2.title Как связаться с поддержкой сайта?
+            button.open
+          .hidden
+            .article
+              p  Мы стараемся регулярно пополнять ассоримент новыми интереснымим товарами. Как правило раз в 2-3 месяца появляются новые позиции, чтобы порадовать наших постоянных покупателей.
+
+
+    .faq__form
+      .container
+        .form.form--horizontal.wpcf7
+          p.form__title Задать свой вопрос
+
+          form.wpcf7-form
+            .form__df
+              .form__col
+                .form__item
+                  span.wpcf7-form-control-wrap.your-name.text-input.text-input--icon
+                    input.wpcf7-form-control.wpcf7-text.wpcf7-name(type='text', name='your-name', value='', size='40', aria-required='true', aria-invalid='false', placeholder='Ваше имя')
+                    i.input-icon
+                      svg.icon
+                        use(xlink:href="img/svg/sprite.svg#form-user")
+
+                .form__item
+                  span.wpcf7-form-control-wrap.your-tel.text-input.text-input--icon
+                    input.wpcf7-form-control.wpcf7-text.wpcf7-tel(type='tel', name='your-tel', value='', size='40', aria-required='true', aria-invalid='false', placeholder='Номер телефона')
+                    i.input-icon
+                      svg.icon
+                        use(xlink:href="img/svg/sprite.svg#icon-phone")
+
+              .form__col
+                .form__item
+                  span.wpcf7-form-control-wrap.your-message.text-input.text-input--icon
+                    label(for="your-msg")
+                      i.input-icon
+                        svg.icon
+                          use(xlink:href="img/svg/sprite.svg#form-msg")
+
+                      span Сообщение
+
+                    textarea.wpcf7-form-control.wpcf7-text.wpcf7-message#your-msg(name='your-message', cols="40", rows="10", aria-required='true', aria-invalid='false', placeholder="")
+
+            .form__item.form__item--submit
+              .btn__wrap
+                input.wpcf7-form-control.wpcf7-submit.btn.btn--red(type='submit', value='Отправить')
+
+            .form__item
+              span.wpcf7-form-control-wrap.accept
+                span.wpcf7-form-control.wpcf7-checkbox.wpcf7-validates-as-required
+                  span.wpcf7-list-item
+                    label
+                      input(type='checkbox', name='accept', value='Согласие на обработку персональных данных', checked='checked')
+                      span.wpcf7-list-item-label Согласие на обработку персональных данных
+                        i.accept__icon
+
+
+        // /. form
+
+  // /.scr_faq

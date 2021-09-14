@@ -1,0 +1,640 @@
+.prod
+  position: relative
+  background-color: #fafafa
+  padding-top: 32px
+  padding-bottom: 45px
+  .title
+    margin-bottom: 0
+  &__wrap
+    position: relative
+  &__slider
+    overflow: hidden
+    width: calc(100% + 58px)
+    margin-left: -29px
+    padding: 29px
+    &-btns
+      .swiper-dots
+        display: none
+      .swiper-button-next
+        right: -48px
+      .swiper-button-prev
+        left: -48px
+
+  &__item
+    position: relative
+    display: flex
+    flex-direction: column
+    height: 100%
+    background-color: #ffffff
+    transition: 0.3s
+    &:hover
+      transform: scale(1.08)
+      box-shadow: 1px 3px 10px 0px #c3c3c3
+      .prod__link
+        display: none
+      .prod__quantity
+        display: block
+        margin-top: auto
+        margin-bottom: 5px
+        margin-right: 5px
+  &__top
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    z-index: 10
+  &__label
+    margin-top: 20px
+    padding: 4px 17px 4px 12px
+    font-size: 14px
+    font-weight: 700
+    color: #ffffff
+    background-color: #11c219
+    border-top-right-radius: 13.0px
+    border-bottom-right-radius: 13.0px
+    &--hit
+      background-color: #ff6600
+  &__btns
+    margin-top: 20px
+    margin-right: 15px
+  &__btn
+    background: none
+    border: none
+    outline: none
+    display: block
+    width: 29px
+    height: 26px
+    padding: 5px
+    background-color: rgba(#fff, 0.8)
+    border-radius: 6px
+    cursor: pointer
+    &:hover
+      .icon
+        fill: #f26998
+    .icon
+      fill: #000
+      transition: 0.3s
+
+  &__img
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    text-decoration: none
+    outline: none
+    height: 192px
+    padding: 20px
+    img
+      display: block
+      height: 100%
+    &:hover
+      .prod__watch
+        opacity: 1
+
+  &__watch
+    position: absolute
+    top: 127px
+    left: 50%
+    transform: translateX(-50%)
+    display: flex
+    align-items: center
+    justify-content: center
+    box-shadow: 1px 3px 10px 0px #c3c3c3
+    height: 47px
+    padding: 0 16px
+    background-color: rgba(255,255,255,0.85)
+    border-radius: 23.5px
+    transition: 0.3s
+    opacity: 0
+    white-space: nowrap
+
+  &__categor
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 19px
+    &-item
+      padding: 4px 10px
+      border-radius: 14.0px
+      margin-right: 3px
+      margin-bottom: 3px
+
+      font-size: 14px
+      &--cat1
+        background-color: rgba(255,153,0,0.14)
+      &--cat2
+        background-color: rgba(237,28,40,0.1)
+      &--cat3
+        background-color: rgba(24,193,207,0.14)
+
+  &__main
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+    padding: 0 15px 20px
+  &__title
+    font-weight: 700
+    margin-bottom: 5px
+  &__wegiht
+    margin-bottom: 15px
+  &__prices
+    margin-top: 15px
+  &__price
+    display: block
+    &--old
+      position: relative
+      display: inline-block
+      font-size: 16px
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: $accent
+    &--new
+      font-size: 28px
+      font-weight: 700
+  &__bottom
+    display: flex
+    justify-content: space-between
+    margin-top: auto
+  &__link
+    margin-top: auto
+    margin-left: 10px
+
+  &__quantity
+    display: none
+
+  &__types
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    margin-top: 32px
+    & > li
+      flex-grow: 1
+      margin-right: 6px
+      & > a
+        text-decoration: none
+        outline: none
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        line-height: 1.2
+        box-shadow: 1px 3px 7px 0px #c3c3c3
+        height: 44px
+        padding-left: 13px
+        padding-right: 13px
+        background-color: #ffffff
+        border-radius: 22.0px
+        transition: 0.3s
+        &:hover
+          background-color: $accent
+          box-shadow: 1px 3px 7px 0px rgba(#c3c3c3,0)
+          color: #ffffff
+      &.current
+        & > a
+          background-color: $accent
+          box-shadow: 1px 3px 7px 0px rgba(#c3c3c3,0)
+          color: #ffffff
+
+      &:last-of-type
+        margin-right: 0
+
+  &__list
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    flex-wrap: wrap
+    & > li
+      width: calc((100% - 90px) / 4)
+      margin-right: 30px
+      padding-bottom: 33px
+      &:nth-of-type(4n)
+        margin-right: 0
+
+  &--page
+    padding-top: 0
+    padding-bottom: 29px
+    .page-top
+      margin-bottom: 22px
+    .title--second
+      &.mobile
+        display: none
+
+  &__submenu
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 24px
+    & > li
+      margin-bottom: 4px
+      & > a
+        display: flex
+        align-items: center
+        text-decoration: none
+        outline: none
+        padding: 4px 12px
+        transition: 0.3s
+        i
+          display: block
+          width: 32px
+          height: 35px
+          margin-right: 5px
+          img
+            display: block
+            width: 100%
+            height: 100%
+        span
+          display: block
+        &:hover
+          background-color: #efeeed
+
+  &__sort
+    position: relative
+    display: flex
+    justify-content: flex-end
+    margin-bottom: 27px
+    z-index: 160
+    &-item
+      display: flex
+      align-items: center
+      margin-right: 47px
+      &:last-of-type
+        margin-right: 0
+    &-text
+      margin-right: 15px
+
+  .pager
+    margin-top: -5px
+    margin-bottom: 32px
+
+  .scr1__feat
+    display: flex
+    width: 100%
+    margin-bottom: 30px
+    & > li
+      width: calc((100% - 60px) / 3)
+      margin-right: 30px
+      margin-bottom: 0
+      &:last-of-type
+        margin-right: 0
+    &-item
+      height: 100%
+    &-df
+      flex-direction: column
+      align-items: flex-start
+      padding: 33px 37px 45px 40px
+    &-img
+      margin-bottom: 34px
+    &-nums
+      flex-direction: column
+      padding: 33px 37px 30px 40px
+      & > li
+        display: flex
+        align-items: center
+        margin-right: 0
+        margin-bottom: 25px
+        &:last-of-type
+          margin-bottom: 0
+      .scr1__feat-text
+        flex-shrink: 0
+        color: $accent
+        width: 110px
+        margin-right: 10px
+    &-desc
+      margin-top: 0
+
+  &--may
+    padding-bottom: 30px
+  &--familiar
+    background-color: #efeeed
+    padding-top: 40px
+  &__nav
+    &-btn
+      display: none
+
+
+  @media screen and (max-width: 1240px)
+    padding-bottom: 35px
+    &__slider
+      &-btns
+        .swiper-dots
+          display: flex
+          justify-content: center
+          margin-top: -10px
+        .swiper-button-prev,
+        .swiper-button-next
+          display: none
+
+  // max-width 1240px
+
+  @media screen and (max-width: 1200px)
+    &__img
+      height: 172px
+      padding: 10px
+    &__categor
+      margin-bottom: 5px
+
+  // max-width 1200px
+
+  @media screen and (max-width: 1070px)
+    &__price
+      &--old
+        font-size: 14px
+      &--new
+        margin-top: -3px
+        font-size: 24px
+    &__title
+      font-size: 17px
+      line-height: 1.2
+    &__watch
+      top: 114px
+      height: 40px
+      padding: 0 10px
+      font-size: 14px
+    &__list
+      & > li
+        width: calc((100% - 30px) / 4)
+        margin-right: 10px
+        padding-bottom: 18px
+
+  // max-width 1070px
+
+  @media screen and (max-width: 991px)
+    .scr1__feat-df
+      padding: 23px 17px 35px 20px
+    .scr1__feat-nums
+      padding: 23px 27px 20px 24px
+      .scr1__feat-text
+        width: 60px
+    .scr1__feat > li
+      width: calc((100% - 20px) / 3)
+      margin-right: 10px
+    &__list
+      & > li
+        width: calc((100% - 20px) / 3)
+        margin-right: 10px
+        &:nth-of-type(4n)
+          margin-right: 10px
+        &:nth-of-type(3n)
+          margin-right: 0
+
+  // max-width 991px
+
+  @media screen and (max-width: 900px)
+    &__item
+      &:hover
+        transform: none
+    &__slider
+      width: calc(100% + 20px)
+      margin-left: -10px
+      padding-left: 10px
+      padding-right: 10px
+    &__types
+      & > li
+        & > a
+          font-size: 13px
+
+  // max-width 900px
+
+  @media screen and (max-width: 767px)
+    padding-top: 10px
+    &__title
+      font-size: 15px
+    &__weight
+      font-size: 13px
+    .title--second
+      margin-bottom: 0
+      &.mobile
+        display: block
+    &__submenu
+      flex-wrap: nowrap
+      overflow: auto
+      padding-bottom: 10px
+      & > li
+        margin-right: 11px
+        &:last-of-type
+          margin-right: 0
+        & > a
+          flex-direction: column
+          box-shadow: 0px 7px 15px 0px #e5e5e5
+          width: 137px
+          height: 152px
+          padding: 24px 10px 10px
+          background-color: #ffffff
+          border-radius: 8.0px
+          text-align: center
+          line-height: 1.2
+          i
+            width: 54px
+            height: 43px
+            margin-bottom: 24px
+    &__list
+      & > li
+        width: calc((100% - 10px) / 2)
+        margin-right: 10px
+        &:nth-of-type(3n)
+          margin-right: 10px
+        &:nth-of-type(2n)
+          margin-right: 0
+    &__nav
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+      margin-bottom: 12px
+      h1
+        margin-right: 15px
+      &-btn
+        background: none
+        border: none
+        outline: none
+        display: block
+        width: 20px
+        height: 25px
+        background: transparent url('../img/svg/arrow-black.svg') no-repeat center center
+        background-size: 9px 15px
+        transform-origin: center
+        transform: rotate(90deg)
+        cursor: pointer
+      .menu
+        margin: 0
+        padding: 0
+        list-style: none
+        width: 100%
+        display: none
+        & > li
+          & > a
+            display: block
+            text-decoration: none
+            outline: none
+            padding-left: 10px
+            padding-top: 6px
+            padding-bottom: 6px
+            text-transform: uppercase
+            border-bottom: 1px solid rgba(#000, 0.2)
+            font-weight: 700
+            font-size: 15px
+
+      .sub-menu
+        margin: 0
+        padding: 0
+        list-style: none
+        padding-top: 8px
+        padding-bottom: 3px
+        & > li
+          & > a
+            display: block
+            text-decoration: none
+            outline: none
+            font-size: 15px
+            padding-left: 20px
+            i
+              display: none
+
+  // max-width 767px
+
+  @media screen and (max-width: 700px)
+    &__types
+      overflow-x: auto
+      padding-bottom: 10px
+      margin-bottom: -10px
+
+  // max-width 700px
+
+  @media screen and (max-width: 650px)
+    .scr1__feat
+      flex-direction: column
+    .scr1__feat > li
+      width: 100%
+      margin-right: 0
+      margin-bottom: 10px
+    .scr1__feat-num
+      font-size: 24px
+    .scr1__feat-nums
+      .scr1__feat-text
+        width: 100px
+    .scr1__feat-desc
+      font-size: 14px
+    .scr1__feat-text
+      font-size: 14px
+
+  // max-width 650px
+
+  @media screen and (max-width: 575px)
+    &__label
+      margin-top: 10px
+    &__btns
+      margin-top: 10px
+      margin-right: 5px
+      text-align: center
+    &__img
+      height: 142px
+    &__watch
+      display: none
+    &__bottom
+      flex-direction: column
+    &__prices
+      width: 100%
+      margin-top: 5px
+      display: flex
+      align-items: flex-end
+      justify-content: center
+      margin-bottom: 10px
+    &__price
+      &--new
+        margin-bottom: -3px
+        margin-left: 15px
+    &__quantity
+      display: none
+    &__link
+      width: 100%
+      margin-left: 0
+      text-align: center
+      .btn__wrap
+        width: 100%
+        max-width: 140px
+    &__item
+      &:hover
+        .prod__quantity
+          display: none
+        .prod__link
+          display: block
+    &__sort
+      justify-content: flex-start
+      margin-bottom: 5px
+      &-item
+        &:first-of-type
+          display: none
+      &-text
+        display: none
+    &--page
+      .prod__submenu
+        margin-bottom: 0
+
+  // max-width 575px
+
+  @media screen and (max-width: 450px)
+    &__list
+      margin-bottom: 20px
+      & > li
+        width: 100%
+        margin-right: 0
+        padding-bottom: 11px
+        &:nth-of-type(3n)
+          margin-right: 0
+      .prod__item
+        flex-direction: row
+      .prod__img
+        width: 35.40540540540541%
+        min-width: 100px
+        padding-right: 7px
+        padding-left: 7px
+        padding-top: 10px
+        height: auto
+      .prod__main
+        position: relative
+        flex-grow: 1
+        padding-top: 13px
+        padding-bottom: 15px
+        padding-left: 0
+        z-index: 10
+      .prod__title
+        display: flex
+        justify-content: space-between
+      .prod__categor
+        margin-bottom: 14px
+      .prod__bottom
+        flex-direction: row
+        align-items: center
+      .prod__prices
+        display: block
+        margin-bottom: 0
+      .prod__price--new
+        margin-left: 0
+        font-size: 20px
+      .prod__link
+        margin-top: 0
+        .btn__wrap
+          width: auto
+        .btn--red
+          height: 37px
+          padding-left: 27px
+          padding-right: 27px
+          border-radius: 18.5px
+
+  // max-width 450px
+
+/* prod */

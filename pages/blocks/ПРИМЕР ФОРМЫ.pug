@@ -1,0 +1,31 @@
+.form.wpcf7
+  form.wpcf7-form
+    .form__item
+      span.wpcf7-form-control-wrap.your-name.text-input.text-input--icon
+        input.wpcf7-form-control.wpcf7-text.wpcf7-name(type='text', name='your-name', value='', size='40', aria-required='true', aria-invalid='false', placeholder='Ваше имя')
+        i.input-icon
+          svg.icon
+            use(xlink:href="img/svg/sprite.svg#form-user")
+
+    .form__item
+      span.wpcf7-form-control-wrap.your-tel.text-input.text-input--icon
+        input.wpcf7-form-control.wpcf7-text.wpcf7-tel(type='tel', name='your-tel', value='', size='40', aria-required='true', aria-invalid='false', placeholder='Номер телефона')
+        i.input-icon
+          svg.icon
+            use(xlink:href="img/svg/sprite.svg#form-phone")
+
+    .form__item
+      span.wpcf7-form-control-wrap.your-email.text-input
+        input.wpcf7-form-control.wpcf7-text.wpcf7-email(type='email', name='your-email', value='', size='40', aria-required='true', aria-invalid='false', placeholder='Ваш e-mail')
+
+    .form__item
+      input.wpcf7-form-control.wpcf7-submit.btn--grad(type='submit', value='Получить расчет стоимости')
+
+    .form__item
+      span.wpcf7-form-control-wrap.accept
+        span.wpcf7-form-control.wpcf7-checkbox.wpcf7-validates-as-required
+          span.wpcf7-list-item
+            label
+              input(type='checkbox', name='accept', value='Согласие на обработку персональных данных', checked='checked')
+              span.wpcf7-list-item-label Я согласен с политикой конфиденциальности
+                i.accept__icon

@@ -1,0 +1,251 @@
+.company
+  position: relative
+  background-color: #fafafa
+  .page-top
+    margin-bottom: 16px
+  &__wrap
+    margin-bottom: 23px
+    padding: 39px 0 39px 66px
+  &__img
+    float: right
+    width: 501px
+    height: 518px
+    margin-left: auto
+  &__feat
+    margin: 0
+    padding: 0
+    list-style: none
+    margin-top: 49px
+    padding-right: 92px
+    & > li
+      display: flex
+      align-items: center
+      margin-bottom: 30px
+      &:last-of-type
+        margin-bottom: 0
+      img
+        display: block
+        width: 79px
+        margin-right: 41px
+  &__prod
+    position: relative
+    overflow: hidden
+    margin-bottom: 24px
+    padding: 39px 56px 43px 66px
+    z-index: 1
+    .article
+      h2
+        &:first-of-type
+          margin-top: 0
+    &::after
+      content: ''
+      position: absolute
+      top: -132px
+      right: -124px
+      display: block
+      width: 248px
+      height: 239px
+      background: transparent url('../img/svg/decor-wrap.svg') no-repeat center center
+      background-size: contain
+      z-index: -1
+    &-feat
+      margin: 0
+      padding: 0
+      list-style: none
+      counter-reset: myCounter
+      margin-top: 38px
+      li
+        position: relative
+        padding-left: 94px
+        margin-bottom: 20px
+        &::before
+          position: absolute
+          top: 0
+          left: 0
+          counter-increment: myCounter
+          content: counter(myCounter) "."
+          padding-top: 2px
+          font-size: 64.9px
+          line-height: 1
+          font-weight: 700
+          color: #d2d2d2
+  &__shop
+    padding: 28px 0 27px
+    background: transparent url('../img/categories-bg.jpg') repeat center center
+    &-info
+      margin-bottom: 23px
+      padding: 28px 51px 24px 95px
+    .prod
+      padding: 0
+      background: none
+    .scr1__feat
+      margin-bottom: 0
+  &__certs
+    margin: 0
+    padding: 0
+    list-style: none
+    overflow: hidden
+    &-cont
+      padding-bottom: 34px
+      .title--second
+        text-align: center
+    &-wrap
+      position: relative
+    &-item
+      display: flex
+      flex-direction: column
+      align-items: center
+      text-align: center
+      background-color: #ffffff
+      border: 1px solid rgba(228,233,218,0.69)
+      padding: 44px 20px 27px
+      transition: 0.4s ease-in-out
+      &:hover
+        border-color: $accent
+    &-title
+      margin-top: 38px
+      font-size: 16px
+      line-height: 1.2
+      font-weight: 700
+      color: #000000
+    &-img
+      position: relative
+      display: block
+      text-decoration: none
+      outline: none
+      height: 193px
+      z-index: 1
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        display: block
+        width: 202px
+        height: 202px
+        background-color: #efeeec
+        border-radius: 50%
+        z-index: -1
+      img
+        display: block
+    &-btns
+      .swiper-button-prev
+        left: -58px
+      .swiper-button-next
+        right: -58px
+      .swiper-dots
+        display: none
+
+
+  @media screen and (max-width: 1300px)
+    &__certs
+      &-btns
+        .swiper-button-prev,
+        .swiper-button-next
+          display: none
+        .swiper-dots
+          display: flex
+          justify-content: center
+
+  @media screen and (max-width: 991px)
+    &__shop
+      &-info
+        padding: 28px 20px 24px
+    &__prod
+      padding: 29px 20px 33px
+    &__wrap
+      padding: 29px 0 33px 20px
+    &__img
+      width: 321px
+      height: 348px
+    &__feat
+      margin-top: 29px
+      padding-right: 40px
+      & > li
+        img
+          width: 59px
+    &__certs
+      &-item
+        padding: 14px 10px 17px
+      &-title
+        margin-top: 18px
+        font-size: 14px
+
+  // max-width 991px
+
+  @media screen and (max-width: 767px)
+    padding-top: 20px
+
+  // max-width 767px
+
+  @media screen and (max-width: 700px)
+    &__img
+      width: 221px
+      height: 228px
+    &__content
+      br
+        display: none
+    &__feat
+      & > li
+        margin-bottom: 20px
+        font-size: 14px
+        img
+          margin-right: 31px
+    &__prod
+      &-feat
+        & > li
+          padding-left: 44px
+          font-size: 14px
+          &::before
+            font-size: 43.9px
+    &__certs
+      &-img
+        &::before
+          width: 152px
+          height: 152px
+
+  // max-width 700px
+
+  @media screen and (max-width: 575px)
+    &__feat
+      padding-right: 20px
+      & > li
+        display: block
+        img
+          float: left
+          width: 50px
+          margin-right: 16px
+          margin-bottom: 10px
+    &__img
+      width: 161px
+      height: 168px
+      margin-top: -20px
+
+  // max-width 575px
+
+  @media screen and (max-width: 450px)
+    &__img
+      width: 121px
+      height: 128px
+    &__certs
+      &-title
+        margin-top: 14px
+        font-size: 12px
+
+  // max-width 450px
+
+  @media screen and (max-width: 400px)
+    &__img
+      width: 101px
+      height: 118px
+    &__prod
+      &-feat
+        & > li
+          padding-left: 29px
+          &::before
+            font-size: 30px
+
+  // max-width 400px
+
+/* company */

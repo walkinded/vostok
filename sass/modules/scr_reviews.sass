@@ -1,0 +1,134 @@
+.reviews
+  position: relative
+  background-color: #fafafa
+  padding-bottom: 31px
+  &__list
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    flex-wrap: wrap
+    margin-top: 36px
+    & > li
+      width: calc(50% - 15px)
+      margin-right: 30px
+      padding-bottom: 27px
+      &:nth-of-type(2n)
+        margin-right: 0
+  &__item
+    position: relative
+    background-color: #ffffff
+    border: 1.0px solid rgba(228,233,218,0.7)
+    height: 100%
+    padding: 44px 25px 55px 41px
+    z-index: 1
+    transition: 0.3s
+    overflow: hidden
+    &:hover
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+    &::before
+      content: ''
+      position: absolute
+      right: -19px
+      top: -173px
+      display: block
+      width: 248px
+      height: 239px
+      background: transparent url('../img/svg/decor-wrap.svg') no-repeat center center
+      background-size: contain
+      z-index: -1
+  .page-top
+    margin-bottom: 5px
+  &__top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 22px
+    time
+      display: block
+      font-size: 14px
+      line-height: 1.2
+      color: #999999
+    a
+      position: relative
+      display: block
+      outline: none
+      padding-right: 40px
+      font-size: 14px
+      line-height: 1.2
+      color: #333333
+      transition: 0.3s
+      &:hover
+        color: $accent
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: -27px
+        transform: translateY(-50%)
+        display: block
+        width: 14px
+        height: 17px
+        background: transparent url('../img/svg/icon-download.svg') no-repeat center center
+        background-size: contain
+  &__title
+    margin-top: 0
+    margin-right: 15px
+    margin-bottom: 12px
+    font-size: 14px
+    line-height: 1.2
+    font-weight: 700
+  &__content
+    font-size: 14px
+    line-height: 1.2
+    color: #333333
+
+
+  @media screen and (max-width: 991px)
+    &__list
+      margin-top: 26px
+    &__item
+      padding: 44px 25px 35px 31px
+    &__top
+      a
+        padding-right: 0
+
+  // max-width 991px
+
+  @media screen and (max-width: 767px)
+    padding-top: 20px
+    &__list
+      & > li
+        width: calc(50% - 5px)
+        margin-right: 10px
+        padding-bottom: 12px
+
+  // max-width 767px
+
+  @media screen and (max-width: 700px)
+    &__item
+      padding: 44px 15px 25px
+
+  // max-width 700px
+
+  @media screen and (max-width: 610px)
+    &__top
+      flex-direction: column
+      align-items: flex-start
+      time
+        margin-bottom: 10px
+      a
+        margin-left: 27px
+
+  // max-width 610px
+
+  @media screen and (max-width: 500px)
+    &__list
+      margin-top: 16px
+      & > li
+        width: 100%
+        margin-right: 0
+
+  // max-width 500px
+
+/* reviews */

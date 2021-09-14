@@ -1,0 +1,61 @@
+.post
+  position: relative
+  padding-bottom: 40px
+  .page-top
+    margin-bottom: 32px
+  .breadcrumbs
+    margin-bottom: 26px
+    ol
+      li
+        a,span span
+          color: #000000
+  .article
+    ul
+      li
+        font-size: 16px
+  .title--second
+    margin-bottom: 26px
+  &__also
+    margin-top: 40px
+    margin-bottom: 30px
+    &-read
+      font-size: 18px
+      color: #2e4058
+      vertical-align: middle
+      i
+        position: relative
+        display: inline-block
+        vertical-align: middle
+        margin-right: 17px
+        width: 18px
+        height: 18px
+        border: 1px solid #ee880a
+        border-radius: 50%
+        &::before
+          content: ''
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          width: 7px
+          height: 7px
+          background-color: #ee880a
+          border-radius: 50%
+
+
+  @media screen and (max-width: 700px)
+    .article
+      ul
+        li
+          font-size: 14px
+
+  // max-width 700px
+
+  @media screen and (max-width: 500px)
+    &__also
+      margin-top: 20px
+      margin-bottom: 20px
+
+  // max-width 500px
+
+/* post */

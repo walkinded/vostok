@@ -1,0 +1,101 @@
+mixin scr_cooperation()
+  section.scr_cooperation.cooperation(id="scr_cooperation")
+    .container
+      +page-top
+
+      h1.title--second Сотрудничество
+
+      .cooperation__wrap.decor-wrap
+        ul.cooperation__feat
+          li
+            .cooperation__feat-item
+              .cooperation__feat-icon
+                noscript
+                  img.lazy(src="img/svg/icons/coop-1.svg" alt="" width="125" height="90")
+                img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img/svg/icons/coop-1.svg" alt="" width="125" height="90")
+
+              .cooperation__feat-text
+                p Специальные условия сотрудничества для индивидуальных предпринимателей и юр. лиц!
+
+          li
+            .cooperation__feat-item
+              .cooperation__feat-icon
+                noscript
+                  img.lazy(src="img/svg/icons/coop-2.svg" alt="" width="125" height="90")
+                img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img/svg/icons/coop-2.svg" alt="" width="125" height="90")
+
+              .cooperation__feat-text
+                p Порадуйте Ваших покупателей сладостями высокого качества с доступной ценой.
+
+          li
+            .cooperation__feat-item
+              .cooperation__feat-icon
+                noscript
+                  img.lazy(src="img/svg/icons/coop-3.svg" alt="" width="125" height="90")
+                img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img/svg/icons/coop-3.svg" alt="" width="125" height="90")
+
+              .cooperation__feat-text
+                p Вы получите постоянные продажи и высокий интерес покупателей
+
+        .cooperation__add
+          p
+            strong Наши преимущества
+
+          .article
+            ul
+              li Эксклюзивно в Крыму импортируем товары турецких брендов
+              li предоставляем юридическим лицам всю необходимую документацию —накладные, сертификаты;
+              li доставляем товары во все регионы России
+              li принимаем оплату наличными, безналом, переводом по счету;
+              li консультируем покупателей на всех стадиях оформления заказа.
+
+    .faq__form
+      .container
+        .form.form--horizontal.wpcf7
+          p.form__title Получить специальные условия сотрудничества
+
+          form.wpcf7-form
+            .form__df
+              .form__col
+                .form__item
+                  span.wpcf7-form-control-wrap.your-name.text-input.text-input--icon
+                    input.wpcf7-form-control.wpcf7-text.wpcf7-name(type='text', name='your-name', value='', size='40', aria-required='true', aria-invalid='false', placeholder='Ваше имя')
+                    i.input-icon
+                      svg.icon
+                        use(xlink:href="img/svg/sprite.svg#form-user")
+
+                .form__item
+                  span.wpcf7-form-control-wrap.your-tel.text-input.text-input--icon
+                    input.wpcf7-form-control.wpcf7-text.wpcf7-tel(type='tel', name='your-tel', value='', size='40', aria-required='true', aria-invalid='false', placeholder='Номер телефона')
+                    i.input-icon
+                      svg.icon
+                        use(xlink:href="img/svg/sprite.svg#icon-phone")
+
+              .form__col
+                .form__item
+                  span.wpcf7-form-control-wrap.your-message.text-input.text-input--icon
+                    label(for="your-msg")
+                      i.input-icon
+                        svg.icon
+                          use(xlink:href="img/svg/sprite.svg#form-msg")
+
+                      span Сообщение
+
+                    textarea.wpcf7-form-control.wpcf7-text.wpcf7-message#your-msg(name='your-message', cols="40", rows="10", aria-required='true', aria-invalid='false', placeholder="")
+
+            .form__item.form__item--submit
+              .btn__wrap
+                input.wpcf7-form-control.wpcf7-submit.btn.btn--red(type='submit', value='Получить')
+
+            .form__item
+              span.wpcf7-form-control-wrap.accept
+                span.wpcf7-form-control.wpcf7-checkbox.wpcf7-validates-as-required
+                  span.wpcf7-list-item
+                    label
+                      input(type='checkbox', name='accept', value='Согласие на обработку персональных данных', checked='checked')
+                      span.wpcf7-list-item-label Согласие на обработку персональных данных
+                        i.accept__icon
+
+        // /. form
+
+  // /.scr_cooperation

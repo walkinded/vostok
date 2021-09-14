@@ -1,0 +1,417 @@
+.header
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 400
+  background-color: #fff
+  transition: 0.3s
+  &.fixed
+    box-shadow: 0 0 15px rgba(#000, 0.1)
+    .header__address
+      display: none
+    .header__phones-item:last-of-type
+      display: none
+    .logo
+      width: 76px
+      height: 42px
+      &__wrap
+        margin-right: auto
+      &__text
+        font-size: 11px
+      &::after
+        top: calc(50% - 23px)
+        right: -10px
+        height: 40px
+    .header__total
+      display: flex
+      align-items: center
+      padding: 8px 15px
+      &-item
+        margin-bottom: 0
+        margin-right: 15px
+    .header__middle
+      padding-bottom: 10px
+
+  .burger
+    display: none
+
+  .logo
+    position: relative
+    display: block
+    text-decoration: none
+    width: 166px
+    height: 92px
+    margin-right: 29px
+    &::after
+      content: ''
+      position: absolute
+      top: calc(50% - 30px)
+      right: -14px
+      width: 1px
+      height: 59px
+      background-color: $accent
+    &__wrap
+      display: flex
+      align-items: center
+      margin-right: 55px
+    &__text
+      font-size: 13px
+      line-height: 1.2
+
+  .menu
+    padding: 0
+    margin: 0
+    list-style: none
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 12px
+    padding-bottom: 18px
+    & > li
+      margin-right: 10px
+      &:last-of-type
+        margin-right: 0
+      & > a
+        position: relative
+        display: block
+        text-decoration: none
+        outline: none
+        font-size: 14px
+        line-height: 1.2
+        transition: 0.3s
+        &::after
+          content: ''
+          position: absolute
+          left: 0
+          bottom: -3px
+          width: 100%
+          height: 1px
+          background-color: $accent
+          opacity: 0
+          transition: 0.3s
+        &:hover
+          color: $accent
+          &::after
+            opacity: 1
+
+  &__middle
+    display: flex
+    align-items: center
+    padding-bottom: 16px
+  &__total
+    min-width: 250px
+    background-color: #efeeed
+    margin-right: 50px
+    padding: 15px 15px 18px 23px
+    &-item
+      display: flex
+      align-items: center
+      font-size: 14px
+      line-height: 1.2
+      margin-bottom: 20px
+      &:last-of-type
+        margin-bottom: 0
+      &--min
+        .icon
+          width: 11px
+          height: 15px
+          fill: $accent
+      &--all
+        .icon
+          width: 25px
+          height: 19px
+          fill: #000
+        .header__total-icon
+          margin-right: 32px
+        strong
+          font-size: 18px
+    &-icon
+      position: relative
+      margin-right: 9px
+    &-count
+      position: absolute
+      top: -5px
+      right: -5px
+      display: flex
+      align-items: center
+      justify-content: center
+      min-width: 21px
+      height: 21px
+      background-color: $accent
+      border-radius: 50%
+      text-align: center
+      font-size: 13px
+      line-height: 1.2
+      color: #ffffff
+
+  &__address
+    max-width: 150px
+    margin-right: 15px
+
+  &__text
+    margin-bottom: 15px
+    font-size: 14px
+    line-height: 1.2
+    &:last-of-type
+      margin-bottom: 0
+
+  &__phones
+    margin-left: auto
+    text-align: right
+    .mobile
+      display: none
+    &-item
+      margin-bottom: 5px
+      span
+        display: block
+        font-size: 12px
+        line-height: 1.5 /* 18 / 12 */
+        color: #666666
+        a
+          text-decoration: none
+          outline: none
+          color: #666666
+          transition: 0.3s
+          &:hover
+            color: $accent
+
+  &__phone
+    display: inline-block
+    text-decoration: none
+    outline: none
+    font-size: 18px
+    line-height: 1.2
+    font-weight: 700
+    transition: 0.3s
+    &:hover
+      color: $accent
+
+  &__catalog
+    display: none
+
+
+  @media screen and (max-width: 1400px)
+    .menu
+      padding-top: 9px
+      padding-bottom: 9px
+    &__text
+      margin-bottom: 5px
+      font-size: 13px
+    &__phones
+      &-item
+        margin-bottom: 0
+        span
+          font-size: 11px
+    &__phone
+      font-size: 16px
+    &__total
+      padding: 8px 15px 8px 23px
+    .logo
+      width: 126px
+      height: 62px
+
+  // max-width 1070px
+
+  @media screen and (max-width: 1070px)
+    &__total
+      margin-right: 20px
+    .logo
+      &__text
+        font-size: 12px
+      &__wrap
+        margin-right: 25px
+
+  // max-width 1070px
+
+  @media screen and (max-width: 991px)
+    &__total
+      min-width: 0
+      padding: 8px 10px
+      margin-right: 10px
+      &-item
+        font-size: 13px
+        line-height: 1.2
+        margin-bottom: 10px
+        &--all
+          .header__total-icon
+            margin-right: 22px
+
+  // max-width 991px
+
+  @media screen and (max-width: 950px)
+    &__phones
+      &-item
+        span
+          display: none
+    &__address
+      display: none
+
+  // max-width 950px
+
+  @media screen and (max-width: 900px)
+    &.fixed
+      .header__total
+        &-item
+          &--min
+            display: none
+      .logo
+        &__wrap
+          margin-right: 15px
+
+  // max-width 900px
+
+  @media screen and (max-width: 767px)
+    .logo
+      width: 86px
+      height: 52px
+      margin-right: 19px
+      &::after
+        right: -10px
+      &__text
+        font-size: 11px
+      &__wrap
+        margin-right: 15px
+    &__phone
+      font-size: 14px
+    &__total
+      &-item
+        font-size: 12px
+        margin-bottom: 8px
+        &--all
+          strong
+            font-size: 16px
+          .icon
+            width: 20px
+            height: 15px
+          .header__total-icon
+            margin-right: 12px
+        &--min
+          .icon
+            width: 8px
+            height: 12px
+        &-icon
+          margin-right: 6px
+      &-count
+        top: -7px
+        min-width: 17px
+        height: 17px
+        font-size: 12px
+    .burger
+      display: flex
+      margin-right: 10px
+    &__top
+      transform: translateX(-110%)
+      position: absolute
+      top: 0
+      left: 0
+      height: 100vh
+      width: 350px
+      max-width: 100%
+      background: #fff
+      box-shadow: 0 0 15px rgba(#000, 0.1)
+      z-index: 100
+      padding-top: 60px
+      overflow: auto
+      transition: 0.3s
+      &.active
+        transform: translateX(0)
+        transition: 1s
+
+    .menu
+      flex-direction: column
+      align-items: flex-start
+      text-align: left
+      & > li
+        width: 100%
+        & > a
+          font-size: 16px
+          padding: 8px 0
+          border-bottom: 1px solid rgba(#000, 0.2)
+          &::after
+            content: none
+
+    &__middle
+      padding-top: 15px
+
+    &__catalog
+      background: none
+      border: none
+      outline: none
+      display: flex
+      align-items: center
+      font-size: 16px
+      margin-right: 10px
+      cursor: pointer
+      &:hover
+        color: $accent
+
+    &__total
+      background: none
+      padding: 0
+      margin-left: auto
+      margin-right: 3px
+      &-item
+        &--min
+          display: none
+        &--all
+          & > span
+            display: none
+    &__phones
+      margin-left: 0
+      &-item
+        display: none
+      .mobile
+        display: flex
+        margin-top: -6px
+    .logo
+      width: 66px
+      height: 32px
+      margin-right: 16px
+
+    &.fixed
+      .logo
+        width: 66px
+        height: 32px
+        margin-right: 16px
+      .header__total
+        background: none
+        padding: 0
+        margin-left: auto
+        margin-right: 3px
+      .header__total-item
+        margin-right: 0
+
+  // max-width 767px
+
+  @media screen and (max-width: 575px)
+    .logo
+      &__text
+        font-size: 10px
+      &::after
+        top: calc(50% - 22px)
+        right: -10px
+        height: 43px
+
+    &.fixed
+      .logo
+        &__text
+          font-size: 10px
+        &::after
+          top: calc(50% - 22px)
+          right: -10px
+          height: 43px
+
+  // max-width 575px
+
+  @media screen and (max-width: 500px)
+    .logo
+      &__text
+        display: none
+      &::after
+        content: none
+
+  // max-width 400px
+
+/* .header */

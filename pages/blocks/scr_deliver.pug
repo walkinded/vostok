@@ -1,0 +1,78 @@
+mixin scr_deliver()
+  section.scr_deliver.deliver(id="scr_deliver")
+    .container
+      +page-top
+
+      h1.title--second Оплата и доставка
+
+      .deliver__df
+        .decor-wrap.deliver__order
+          h2.title Как заказать?
+
+          ol
+            li
+              p
+                strong Заказ
+                br
+                |  Оформляете заказ на сайте на сумму от 2500Р
+            li
+              p
+                strong Подтверждение
+                br
+                |  Менеджер подтвердит заказ и вышлет письмо для оплаты
+            li
+              p
+                strong Оплата
+                br
+                |  После оплаты заказа мы собираем и отправляем его в течение 1 дня
+            li
+              p
+                strong Доставка и получение
+                br
+                |  Готово!
+                br
+                |  Вы получаете заказ
+
+        .deliver__right
+          .decor-wrap.deliver__pay
+            h2.title--second Способы оплаты
+
+            .deliver__text
+              p Оплатить заказ вы можете удобным для вас способом: банковской картой онлайн или безналичным перечислением. Мы работаем с физическими лицами и организациями.
+
+
+            .deliver__pay-wrap
+              ul.deliver__pay-list
+                li
+                  noscript
+                    img.lazy(src="img-temp/pay/img-1.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                  img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-temp/pay/img-1.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                li
+                  noscript
+                    img.lazy(src="img-temp/pay/img-2.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                  img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-temp/pay/img-2.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                li
+                  noscript
+                    img.lazy(src="img-temp/pay/img-3.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                  img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-temp/pay/img-3.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                li
+                  svg.icon
+                    use(xlink:href="img/svg/sprite.svg#icon-payment")
+                  span
+                    | Безналичный расчет
+                    br
+                    |  с НДС и без НДС
+
+          .decor-wrap.deliver__deliver
+            h2.title--second Доставка
+
+            .deliver__text
+              p Бесплатно доставляем по России
+              p Отправляем уже на следующий день после заказа.
+
+              span.line
+
+              p Вы можете приобрести товары в самом большом складе-магазине восточных сладостей в Крыму по адресу: г. Симферополь, ул. Автомобилистов,2
+
+
+  // /.scr_deliver

@@ -1,0 +1,187 @@
+mixin scr_company()
+  section.scr_company.company(id="scr_company")
+    .container
+      +page-top
+
+      h1.title--second О компании
+
+      .company__wrap.decor-wrap.clearfix
+        .company__img
+          noscript
+            img.lazy(src="img/company-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+          img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img/company-img.jpg" alt="" width="125" height="90" data-object-fit-contain)
+
+        .company__content
+          .article
+            p
+              strong «Восточный букет» предлагает Вам высококачественные Крымские садости, специи и травяные чаи собственного производства, а также эксклюзивно в Крыму импортируем товары турецких брендов.
+
+            p(style="text-indent: 20px;") Наш магазин работает с 2012 года
+              br
+              |  Уже 8 лет мы радуем своих покупателей огромным выбором действительно хороших продуктов продуктов. Наши специалисты тщательно отбирают каждый продукт изучая составы и отзывы. Наши консультанты индивидуально, для каждого , даже самого взыскательного клиента подберут уход.
+            br
+            br
+
+            p(style="text-indent: 20px;") Мы работаем только с официальными представителями и проверенными поставщиками. Мы предлагаем только то, что купили бы сами.
+
+            br
+
+            h2 Собственное производство
+
+            p
+              strong Купить КРЫМСКИЕ  И ВОСТОЧНЫЕ СЛАДОСТИ от нашего производителя – это значит приобрести гарантированно свежий и качественный продукт!
+
+          ul.company__feat
+            li
+              img(src="img/svg/icons/comp-1.svg" alt="" width="125" height="90")
+
+              .company__feat-text
+                p Мы предлагаем большой ассортимент вкуснейших натуральных сладостей по низкой цене. Здесь Вы можете без труда купить оптом: рахат-лукум, пишманье, наборы специй, высококачественный джем, крымский травяной чай, халву и другую натуральную продукцию.Выбирайте крымские сладости по оптовым ценам в наших каталогах — и заказывайте в любом количестве!
+
+            li
+              img(src="img/svg/icons/comp-2.svg" alt="" width="125" height="90")
+
+              .company__feat-text
+                p Благодаря организованной работе менеджеров и продуманной логистике компании, мы готовы максимально быстро доставить сладости из Крыма в любой из регионов.
+
+            li
+              img(src="img/svg/icons/comp-3.svg" alt="" width="125" height="90")
+
+              .company__feat-text
+                p «Восточный букет» предлагает сотрудничество и выгодные цены оптовикам во всех регионах, для наших клиентов продуманна качественная логистика и программа закупок- есть возможность работы как с крупными оптовиками так и с небольшими магазинами. Звоните нашим менеджерам и они всегда ответят на ваши вопросы и проконсультируют.
+
+
+
+      .company__prod.decor-wrap
+        .article
+          h2 Товары собственного производства  с настоящим крымским духом и вкусом!
+
+          p
+            strong Такие подарки, купленные для себя или близких, точно никого не оставят в стороне. Они наполнены одновременно эксклюзивностью, красотой, и служат отличным дополнением к Вашему столу!
+
+          p
+            strong Чем привлекают наши «сувениры» гостей Крыма и его жителей?(пункты визуально оформить)
+
+        ol.company__prod-feat
+          li В состав предлагаемых нами специй и десертов входят натуральные, экологически чистые и специально для этого обработанные ингредиенты. Для приготовления своей продукции мы используем старинные рецепты, соблюдаются все стадии изготовления, благодаря чему достигается такой неповторимый и нежный вкус.
+          li Все изделия предлагаются в интересной оригинальной подарочной упаковке. Их приятно и держать в руках самому, и интересно подарить. Покупая, к примеру, в таком виде целый набор специй для приготовления различных блюд – их хватает практически на весь год, до следующей поездки в Крым!  рахат-лукум будет отличным десертом к любому столу.
+          li Большой ассортимент полезных и вкуснейших крымских десертов высокого качества, травяных чаёв — на выбор, а также различных специй для любых блюд. Вы можете у нас заказать и купить ассорти, или набор с полюбившимся Вам составом — в любом количестве!
+          li Свежесть производимых продуктов! Наша компания всегда дорожит своей репутацией, а потому требовательно относится не только к производству, но и к условиям хранения и транспортировки. Поэтому, у нас Вы всегда можете купить свежие и качественные оригинальные крымские подарки.
+          li Уже давно продукция Компании «Восточный букет» славится на весь Крым! Многие туристы, купив у нас однажды, возвращаются к нам ещё не один раз.
+
+      .company__certs-cont
+        h2.title--second Сертификаты
+
+        .company__certs-wrap
+          .company__certs#company__certs
+            .swiper-wrapper
+              .swiper-slide
+                .company__certs-item
+                  a.company__certs-img.fancybox(href="img/certs-img.jpg")
+                    img(src="img/certs-img.jpg" alt="" data-object-fit-contain)
+
+                  p.company__certs-title Сертификат соответствия на&nbsp;производимую продукцию
+              .swiper-slide
+                .company__certs-item
+                  a.company__certs-img.fancybox(href="img/certs-img.jpg")
+                    img(src="img/certs-img.jpg" alt="" data-object-fit-contain)
+
+                  p.company__certs-title Сертификат соответствия на&nbsp;производимую продукцию
+              .swiper-slide
+                .company__certs-item
+                  a.company__certs-img.fancybox(href="img/certs-img.jpg")
+                    img(src="img/certs-img.jpg" alt="" data-object-fit-contain)
+
+                  p.company__certs-title Сертификат соответствия на&nbsp;производимую продукцию
+              .swiper-slide
+                .company__certs-item
+                  a.company__certs-img.fancybox(href="img/certs-img.jpg")
+                    img(src="img/certs-img.jpg" alt="" data-object-fit-contain)
+
+                  p.company__certs-title Сертификат соответствия на&nbsp;производимую продукцию
+              .swiper-slide
+                .company__certs-item
+                  a.company__certs-img.fancybox(href="img/certs-img.jpg")
+                    img(src="img/certs-img.jpg" alt="" data-object-fit-contain)
+
+                  p.company__certs-title Сертификат соответствия на&nbsp;производимую продукцию
+
+          .company__certs-btns
+            button.swiper-button-prev
+            .swiper-dots
+            button.swiper-button-next
+
+
+    .company__shop
+      .container
+        .company__shop-info.decor-wrap
+          .article
+            p
+              strong И теперь, чтобы получить крымские сувениры, в Крым ехать не обязательно!
+            p
+              strong Мы создали интернет-магазин для тех, кто хочет КРУГЛЫЙ ГОД наслаждаться изумительным вкусом настоящих восточных сладостей и травяных чаёв, или же придавать особой изысканности своим блюдам с помощью крымских специй!
+            p
+              strong Выберите и закажите в нашем каталоге любую позицию товара – и очень скоро Вы сможете ощутить её неповторимый вкус! Мы обеспечиваем доставку заказов по всей России!
+
+        .company__shop-feat.prod
+          ul.scr1__feat
+            li
+              .scr1__feat-item
+                .scr1__feat-df
+                  .scr1__feat-img
+                    noscript
+                      img.lazy(src="img/flag.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                    img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img/flag.jpg" alt="" width="125" height="90" data-object-fit-contain)
+
+                  .scr1__feat-text
+                    strong Эксклюзивно в Крыму импортируем товары турецких брендов:
+                    |  Ulker, Pinar, Koska, Helis, Bebeto, Filiz
+
+            li
+              .scr1__feat-item
+                .scr1__feat-df
+                  .scr1__feat-img
+                    noscript
+                      img.lazy(src="img/flag.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                    img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img/auto.jpg" alt="" width="125" height="90" data-object-fit-contain)
+
+                  .scr1__feat-text
+                    strong Бесплатно доставляем по России
+                    |  Отправляем уже на следующий день после заказа
+
+            li
+              .scr1__feat-item
+                ul.scr1__feat-nums
+                  li
+                    .scr1__feat-text
+                      span.scr1__feat-num 8
+                      |  лет
+
+                    .scr1__feat-desc
+                      p производим
+                        br
+                        |  сладости
+
+                  li
+                    .scr1__feat-text
+                      span.scr1__feat-num 600
+                      |  кв.м
+
+                    .scr1__feat-desc
+                      p самый большой магазин-
+                        br
+                        |  склад в Крыму
+
+                  li
+                    .scr1__feat-text
+                      span.scr1__feat-num 2000
+                      small +
+
+                    .scr1__feat-desc
+                      p позиций
+                        br
+                        |  в ассортименте
+
+
+
+  // /.scr_company

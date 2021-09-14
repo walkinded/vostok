@@ -1,0 +1,21 @@
+mixin page-btns()
+  section.page-btns(id="page-btns")
+    .container
+      ul.page-btns__list
+        li
+          button.page-btns__btn
+            svg.icon
+              use(xlink:href="img/svg/sprite.svg#page-search")
+        li
+          button.page-btns__btn
+            svg.icon
+              use(xlink:href="img/svg/sprite.svg#page-heart")
+        li
+          .header__total-item.header__total-item--all
+            .header__total-icon
+              span.header__total-count 5
+              svg.icon
+                use(xlink:href="img/svg/sprite.svg#icon-cart")
+
+
+  // /.page-btns

@@ -1,0 +1,154 @@
+mixin footer(logotype)
+  footer.footer(id="footer")
+    .container
+      .footer__top
+        .footer__left
+          .footer__df
+            .footer__menu
+              ul.menu
+                li.menu-item
+                  a(href="#") Карта сайта
+                    span.menu__open
+
+                  ul.sub-menu
+                    li.menu-item
+                      a(href="#") О компании
+                    li.menu-item
+                      a(href="#") Сотрудничество
+                    li.menu-item
+                      a(href="#") Оплата и доставка
+                    li.menu-item
+                      a(href="#") Вопрос-ответ
+                    li.menu-item
+                      a(href="#") Полезная информация
+                    li.menu-item
+                      a(href="#") Отзывы
+                    li.menu-item
+                      a(href="#") Контакты
+
+            .footer__menu
+              ul.menu
+                li.menu-item
+                  a(href="#") Личный кабинет
+                    span.menu__open
+
+                  ul.sub-menu
+                    li.menu-item
+                      a(href="#") Вход
+                    li.menu-item
+                      a(href="#") Регистрация
+                    li.menu-item
+                      a(href="#") Мои заказы
+                    li.menu-item
+                      a(href="#") Понравилось
+
+          .footer__pay
+            p.footer__pay-title Способы оплаты:
+
+            ul.footer__pay-list
+              li
+                .footer__pay-img
+                  noscript
+                    img.lazy(src="img-temp/pay/img-1.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                  img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-temp/pay/img-1.jpg" alt="" width="125" height="90" data-object-fit-contain)
+
+              li
+                .footer__pay-img
+                  noscript
+                    img.lazy(src="img-temp/pay/img-2.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                  img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-temp/pay/img-2.jpg" alt="" width="125" height="90" data-object-fit-contain)
+
+              li
+                .footer__pay-img
+                  noscript
+                    img.lazy(src="img-temp/pay/img-3.jpg" alt="" width="125" height="90" data-object-fit-contain)
+                  img.lazy( src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-temp/pay/img-3.jpg" alt="" width="125" height="90" data-object-fit-contain)
+
+
+        .footer__right
+          .footer__df
+            .footer__menu
+              ul.menu
+                li.menu-item
+                  a(href="#") Каталог
+                    span.menu__open
+
+                  .menu-item__wrap
+                    ul.sub-menu
+                      li.menu-item
+                        a(href="#") Сладости
+                      li.menu-item
+                        a(href="#") Бакалея
+                      li.menu-item
+                        a(href="#") Напитки
+                      li.menu-item
+                        a(href="#") Посуда
+
+                    ul.sub-menu
+                      li.menu-item
+                        a(href="#") Кофе и чай
+                      li.menu-item
+                        a(href="#") Идеи для подарков
+                      li.menu-item
+                        a(href="#") Турецкие продукты
+                      li.menu-item
+                        a(href="#") Наше производство
+
+            .footer__menu
+              ul.menu
+                li.menu-item
+                  a(href="#") Контакты
+
+              .footer__contacts
+                .footer__contacts-item
+                  a.footer__contacts-link(href="tel:88002228353" rel="nofollow") 8 (800) 222 8353
+
+                .footer__contacts-item
+                  .footer__contacts-df
+                    a.footer__contacts-link(href="tel:89781003269" rel="nofollow") 8 (978) 100 32 69
+
+                br
+
+                .footer__contacts-text
+                  p
+                    strong Склад-магазин:
+                    br
+                    |  г. Симферополь,
+                    br
+                    |  ул. Автомобилистов, 2
+
+                .footer__contacts-text
+                  p
+                    strong Время работы:
+                    br
+                    |  Пн-Сб с 9-00 до 18-00
+
+                .footer__contacts-text.footer__contacts-text--socials
+                  p
+                    strong Соц сети:
+
+                +socials
+
+      // /.footer__top
+    // /.container
+
+    .footer__bottom
+      .container
+        .footer__bottom-df
+          .footer__politics
+            a.text(href="#") Политика конфиденциальности
+
+          .footer__copyright
+            p.text г. Симферополь © Copyright  2020&nbsp;г.
+
+
+          a.made(href="https://sheer82.ru/")
+            span.text Сделано в
+            svg.icon
+              use(xlink:href='img/svg/sprite.svg#iconSheer')
+
+        // /.row
+      // /.container
+    // /.footer__bottom
+  // /.footer
+
